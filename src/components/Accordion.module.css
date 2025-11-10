@@ -53,7 +53,7 @@
 
 .chevron {
   color: var(--color-primary); /* Azul Swan */
-  transition: transform 1.2s;
+  transition: transform .4s ease-in; 
 }
 
 .chevron.open {
@@ -64,12 +64,11 @@
 .accordionContent {
   max-height: 0;
   overflow: hidden;
-  transition: 1.3s;
+  transition: .7s;
 }
 
 .accordionContent.open {
   max-height: 1000px;
-  transition: 3s;
 }
 
 
