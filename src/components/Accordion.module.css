@@ -1,0 +1,93 @@
+.accordion {
+  width: 100%;
+  margin-bottom: 12px;
+  box-shadow: 5px 5px 5px 1px #000008d2;
+  border-radius: 8px;
+
+  background-color: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #eee);
+  overflow: hidden; 
+}
+
+.accordionHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 16px 20px;
+  
+  /* Cor da fonte do header */
+  color: var(--color-text-header);
+  
+  
+  border: none;
+  background-color: transparent; 
+  /* Separador interno */
+  border-bottom: 1px solid var(--color-border, #eee); 
+  
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600; 
+
+  transition: background-color 0.2s ease;
+}
+
+.accordionHeader:hover {
+  background-color: var(--color-surface-hover, #f9f9f9);
+}
+
+.accordionHeader.open {
+  border-bottom-color: transparent;
+}
+
+.icon {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  color: var(--color-primary); /* Azul Swan */
+}
+
+.title {
+  flex-grow: 1; 
+}
+
+.chevron {
+  color: var(--color-primary); /* Azul Swan */
+  transition: transform 1.2s;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+/* O conteúdo */
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: 1.3s;
+}
+
+.accordionContent.open {
+  max-height: 1000px;
+  transition: 3s;
+}
+
+
+.contentPadding {
+  padding: 4px 20px 20px 20px;
+  line-height: 1.6;
+  /* Cor do texto dentro do card (preto legível) */
+  color: var(--color-text-body);
+}
+
+/* Estilos para o conteúdo que vem do 'children' */
+.contentPadding p {
+  margin: 0 0 10px 0;
+}
+.contentPadding p:last-child {
+  margin-bottom: 0;
+}
+.contentPadding strong {
+  color: #000000; 
+  font-weight: 600;
+}

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* cores da marca */
+  --azul-swan: #1f2841;
+  --dourado-swan: #9f8f65;
+
+  --color-primary: var(--azul-swan);        /* Cor de destaque (ícones nos cards) */
+  --color-background: var(--azul-swan);    /* Fundo da página (Azul) */
+  --color-surface: #ffffff;              /* Fundo dos cards (Branco) */
+  --color-surface-hover: #f9f9f9;      /* Hover leve */
+  --color-border: #eeeeee;              /* Bordas */
+  --color-text-header: var(--azul-swan);   /* Fonte do header do card (Azul) */
+  --color-text-body: #333333;             /* Fonte do corpo (preto legível) */
+  --color-text-global: var(--dourado-swan); /* Cor da fonte global (Dourado) */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset Global e Fundo */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-global);
+}
+
+/* Contêiner principal (Mobile-First) */
+.app-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* Estilo do Texto de Introdução */
+.intro-text {
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 0 10px 10px 10px;
+  /* O texto de introdução precisa ser dourado para ler no fundo azul */
+  color: var(--color-text-global); 
+}
+
+/* Contêiner da Lista de Acordeões */
+.accordion-list {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Note: Todos os estilos do acordeão foram movidos para o .module.css */

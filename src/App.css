@@ -1,0 +1,10 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.logo img {
+  max-width: auto;
+}
