@@ -1,10 +1,22 @@
 /* * Este arquivo separa nossos DADOS (o conteúdo) da APRESENTAÇÃO (o App.jsx).
  * * Se precisarmos mudar um horário ou um texto, mexemos SÓ AQUI.
  * O App.jsx fica limpo, apenas lendo e renderizando esta lista.
- * * Usamos .jsx para poder escrever o conteúdo (os "filhos") 
+ * * Usamos .jsx para poder escrever o conteúdo (os "filhos")
  * diretamente com HTML (JSX).
  */
-import { Wifi, Clock, Coffee, Utensils, Dumbbell, Droplet, WashingMachine, Car, Dog, ShieldAlert } from 'lucide-react';
+import {
+  Wifi,
+  Clock,
+  Coffee,
+  Utensils,
+  Dumbbell,
+  Droplet,
+  ConciergeBell,
+  Car,
+  Dog,
+  ShieldAlert,
+  Map,
+} from "lucide-react";
 
 // --- Conteúdos (Os "Filhos") ---
 // Nós criamos os "filhos" aqui, para deixar a lista principal mais limpa
@@ -13,15 +25,20 @@ const ContentInternet = (
     <p>
       <strong>Wi-Fi:</strong> Acesso gratuito em todo o hotel.
       <br />
-      Rede: <strong>SWAN_GUEST</strong>
+      Rede: <strong>SWAN_HOTEIS</strong>
       <br />
-      Senha: <strong>swan123</strong>
+      <small>
+        <strong>Realize o login na rede, e então utilize: </strong>
+        número do quarto como login e seu último sobrenome como senha
+      </small>
       {/* TODO: Botão COPIAR SENHA */}
     </p>
     <p>
       <strong>Telefones Úteis:</strong>
       <br />
       Recepção: <strong>Ramal 9</strong>
+      <br />
+      Restaurante: <strong>Ramal 1110</strong>
       {/* TODO: Botão LIGAR */}
     </p>
   </>
@@ -30,17 +47,18 @@ const ContentInternet = (
 const ContentCafe = (
   <>
     <p>
-      Nosso delicioso café da manhã é servido no restaurante, localizado no andar S.
+      Nosso delicioso café da manhã é servido no restaurante, localizado no
+      andar S.
     </p>
     <p>
       <strong>Segunda a Sexta:</strong>
       <br />
-      05:00 às 10:00
+      06:30 às 10:00
     </p>
     <p>
       <strong>Finais de Semana e Feriados:</strong>
       <br />
-      06:00 às 10:00
+      07:00 às 10:30
     </p>
   </>
 );
@@ -48,10 +66,16 @@ const ContentCafe = (
 const ContentRestaurante = (
   <>
     <p>
-      O restaurante está aberto diariamente para almoço e jantar.
+      <strong>Irius Gastronomia (Restaurante):</strong>
+      <br />
+      Segunda a Sexta: 11:30 às 14:00 e 19:00 às 23:00.
+      <br />
+      <small>(Fechado em finais de semana e feriados)</small>
     </p>
     <p>
-      O Room Service funciona 24h.
+      <strong>Room Service (Serviço de Quarto):</strong>
+      <br />
+      Todos os dias: 11:30 às 23:00.
     </p>
     {/* TODO: Botões de MODAL para os cardápios */}
   </>
@@ -66,7 +90,8 @@ const ContentCheckInOut = (
       <strong>Check-out:</strong> até as 12:00 (meio-dia).
     </p>
     <p>
-      Para saídas antecipadas ou *late check-out*, por favor, consulte a recepção (Ramal 9).
+      Para entradas antecipadas ou *late check-out*, por favor, consulte a disponibilidade com a
+      recepção (Ramal 9).
     </p>
   </>
 );
@@ -79,14 +104,14 @@ const ContentLazer = (
       Horário: 24 horas por dia.
     </p>
     <p>
-      <strong>Piscina Aquecida:</strong>
+      <strong>Piscina:</strong>
       <br />
       Horário: 07:00 às 21:00.
     </p>
     <p>
-      <strong>Sauna:</strong>
+      <strong>Sauna seca e úmida:</strong>
       <br />
-      Horário: 16:00 às 21:00.
+      Horário: 07:00 às 21:00.
     </p>
   </>
 );
@@ -102,7 +127,7 @@ const ContentServicos = (
     <p>
       <strong>Estacionamento:</strong>
       <br />
-      Custo: R$ 32,00 por dia.
+      Custo: R$ 20,00 por dia.
     </p>
   </>
 );
@@ -116,8 +141,7 @@ const ContentPoliticas = (
     </p>
     <p>
       <strong>Política de Fumantes:</strong>
-      <br />
-      É proibido fumar nas dependências internas do hotel.
+      <br />É proibido fumar nas dependências internas do hotel.
     </p>
     <p>
       <strong>Voltagem:</strong>
@@ -127,6 +151,44 @@ const ContentPoliticas = (
   </>
 );
 
+const ContentLocais = (
+  <>
+    <p>
+      <strong>Andar SC</strong>
+      <br />
+      Café da manhã
+      <br />
+      Academia
+      <br />
+      Psicina
+      <br />
+      Sauna seca e sauna úmida
+      <br />
+      Massagista - Edília*
+    </p>
+    <p>
+      <strong>Andar P</strong>
+      <br />
+      Recepção
+      <br />
+      Restaurante Irius
+      <br />
+      Bar Irius
+      <br />
+      Centro de Eventos
+      <br />
+      Lobby
+    </p>
+    <p>
+      <strong>Andar -1</strong>
+      <br />
+      Estacionamento
+    </p>
+    <p style={{ fontSize: "10px" }}>
+      *Serviço cobrado, consulte a recepção para maiores informações
+    </p>
+  </>
+);
 
 // --- A LISTA PRINCIPAL (Nosso "Banco de Dados") ---
 export const accordionData = [
@@ -134,42 +196,48 @@ export const accordionData = [
     id: 1,
     icon: <Wifi size={24} />,
     title: "Internet e Telefones",
-    content: ContentInternet // O "filho" vem daqui
+    content: ContentInternet, // O "filho" vem daqui
   },
   {
     id: 2,
     icon: <Coffee size={24} />,
     title: "Café da Manhã",
-    content: ContentCafe // O "filho" vem daqui
+    content: ContentCafe, // O "filho" vem daqui
   },
   {
     id: 3,
     icon: <Utensils size={24} />,
     title: "Restaurante e Room Service",
-    content: ContentRestaurante // O "filho" vem daqui
+    content: ContentRestaurante, // O "filho" vem daqui
   },
   {
     id: 4,
-    icon: <Clock size={24} />,
-    title: "Check-in e Check-out",
-    content: ContentCheckInOut // O "filho" vem daqui
+    icon: <Map size={24} />,
+    title: "Locais",
+    content: ContentLocais, // O "filho" vem daqui
   },
   {
     id: 5,
     icon: <Dumbbell size={24} />,
     title: "Lazer (Academia, Piscina, Sauna)",
-    content: ContentLazer // O "filho" vem daqui
+    content: ContentLazer, // O "filho" vem daqui
   },
   {
     id: 6,
-    icon: <WashingMachine size={24} />,
+    icon: <ConciergeBell size={24} />,
     title: "Serviços (Lavanderia, Estacionamento)",
-    content: ContentServicos // O "filho" vem daqui
+    content: ContentServicos, // O "filho" vem daqui
   },
   {
     id: 7,
+    icon: <Clock size={24} />,
+    title: "Check-in e Check-out",
+    content: ContentCheckInOut, // O "filho" vem daqui
+  },
+  {
+    id: 8,
     icon: <ShieldAlert size={24} />,
     title: "Políticas do Hotel",
-    content: ContentPoliticas // O "filho" vem daqui
-  }
+    content: ContentPoliticas, // O "filho" vem daqui
+  },
 ];
