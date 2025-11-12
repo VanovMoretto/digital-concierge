@@ -192,7 +192,7 @@ const ContentLocais = () => (
       <br />
       Academia
       <br />
-      Psicina
+      Piscina
       <br />
       Sauna seca e sauna a vapor
       <br />
