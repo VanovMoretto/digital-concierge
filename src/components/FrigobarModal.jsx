@@ -12,7 +12,7 @@ function FrigobarModal({ isOpen, onClose, imageName }) {
 
   // Define o caminho da imagem. Como está na pasta /public/,
   // podemos acessá-la diretamente pela raiz '/'.
-  const imagePath = `/${imageName}`;
+  const imagePath = `${import.meta.env.BASE_URL}${imageName}`;
 
   return (
     <div className={styles.modalBackdrop} onClick={onClose}>

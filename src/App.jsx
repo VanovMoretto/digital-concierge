@@ -4,6 +4,7 @@ import Accordion from "./components/Accordion";
 import Modal from "./components/Modal";
 import FrigobarModal from "./components/FrigobarModal";
 import "./App.css";
+import Footer from "./components/Footer";
 
 function Logo() {
   return (
@@ -26,6 +27,7 @@ function App() {
   const closeFrigobarModal = () => setIsFrigobarModalOpen(false);
 
   return (
+    <>
     <div className="app-container">
       <Logo />
       <section className="intro-text">
@@ -48,6 +50,7 @@ function App() {
                   de abrir o modal APENAS se for o item de id 6 */}
               <ContentComponent
                 onOpenLaundryModal={item.id === 6 ? openLaundryModal : null}
+                onOpenFrigobarModal={item.id === 3 ? openFrigobarModal : null}
               />
             </Accordion>
           );
@@ -57,11 +60,14 @@ function App() {
       {/* 6. ADICIONE O MODAL AQUI (fora do 'main') */}
       {/* Ele fica "escutando" o estado 'isLaundryModalOpen' */}
       <Modal isOpen={isLaundryModalOpen} onClose={closeLaundryModal} />
-      <FrigobarModal 
-      isOpen={isFrigobarModalOpen}
-      onClose={closeFrigobarModal}
-      imageName="cardapio-frigobar.png"/>
+      <FrigobarModal
+        isOpen={isFrigobarModalOpen}
+        onClose={closeFrigobarModal}
+        imageName="cardapio-frigobar.png"
+      />
     </div>
+    <Footer />
+    </>
   );
 }
 
