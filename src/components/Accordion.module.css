@@ -1,7 +1,6 @@
 .accordion {
   width: 100%;
   margin-bottom: 12px;
-  box-shadow: 5px 5px 5px 1px #000008d2;
   border-radius: 8px;
 
   background-color: transparent;
@@ -38,7 +37,6 @@
 
 .accordionHeader.open {
   border-bottom-color: transparent;
-  box-shadow: 1px 0px 8px 3px #00000d;
 }
 
 .icon {
@@ -54,7 +52,7 @@
 
 .chevron {
   color: var(--azul-swan); /* Azul Swan */
-  transition: transform .4s ease-in; 
+  transition: transform .5s ease-in-out;
 }
 
 .chevron.open {
@@ -65,7 +63,7 @@
 .accordionContent {
   max-height: 0;
   overflow: hidden;
-  transition: .5s;
+  transition: max-height 0.5s ease-in-out;
   background-color: var(--color-surface);
 }
 
