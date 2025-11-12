@@ -4,8 +4,8 @@
   box-shadow: 5px 5px 5px 1px #000008d2;
   border-radius: 8px;
 
-  background-color: var(--color-surface, #fff);
-  border: 1px solid var(--color-border, #eee);
+  background-color: transparent;
+  border: none;
   overflow: hidden; 
 }
 
@@ -16,13 +16,13 @@
   padding: 16px 20px;
   
   /* Cor da fonte do header */
-  color: var(--color-text-header);
+  color: var(--azul-swan);
   
   
   border: none;
-  background-color: transparent; 
+  background-color: var(--dourado-swan); 
   /* Separador interno */
-  border-bottom: 1px solid var(--color-border, #eee); 
+  border-bottom: 1px solid var(--color-background); 
   
   cursor: pointer;
   text-align: left;
@@ -33,18 +33,19 @@
 }
 
 .accordionHeader:hover {
-  background-color: var(--color-surface-hover, #f9f9f9);
+  filter: brightness(0.95);
 }
 
 .accordionHeader.open {
   border-bottom-color: transparent;
+  box-shadow: 1px 0px 8px 3px #00000d;
 }
 
 .icon {
   margin-right: 12px;
   display: flex;
   align-items: center;
-  color: var(--color-primary); /* Azul Swan */
+  color: var(--azul-swan); /* Azul Swan */
 }
 
 .title {
@@ -52,7 +53,7 @@
 }
 
 .chevron {
-  color: var(--color-primary); /* Azul Swan */
+  color: var(--azul-swan); /* Azul Swan */
   transition: transform .4s ease-in; 
 }
 
@@ -64,19 +65,20 @@
 .accordionContent {
   max-height: 0;
   overflow: hidden;
-  transition: .7s;
+  transition: .5s;
+  background-color: var(--color-surface);
 }
 
 .accordionContent.open {
   max-height: 1000px;
+  border: 1px solid transparent;
 }
 
 
 .contentPadding {
-  padding: 4px 20px 20px 20px;
+  padding: 10px 20px 20px 20px;
   line-height: 1.6;
-  /* Cor do texto dentro do card (preto legível) */
-  color: var(--color-text-body);
+  color: var(--azul-swan);
 }
 
 /* Estilos para o conteúdo que vem do 'children' */
@@ -87,6 +89,6 @@
   margin-bottom: 0;
 }
 .contentPadding strong {
-  color: #000000; 
+  color: var(--azul-swan); 
   font-weight: 600;
 }

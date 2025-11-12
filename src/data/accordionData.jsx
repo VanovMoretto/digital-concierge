@@ -4,6 +4,7 @@
  * * Usamos .jsx para poder escrever o conteúdo (os "filhos")
  * diretamente com HTML (JSX).
  */
+import React from "react";
 import {
   Wifi,
   Clock,
@@ -20,7 +21,7 @@ import {
 
 // --- Conteúdos (Os "Filhos") ---
 // Nós criamos os "filhos" aqui, para deixar a lista principal mais limpa
-const ContentInternet = (
+const ContentInternet = () => (
   <>
     <p>
       <strong>Wi-Fi:</strong> Acesso gratuito em todo o hotel.
@@ -44,7 +45,7 @@ const ContentInternet = (
   </>
 );
 
-const ContentCafe = (
+const ContentCafe = () => (
   <>
     <p>
       Nosso delicioso café da manhã é servido no restaurante, localizado no
@@ -63,7 +64,7 @@ const ContentCafe = (
   </>
 );
 
-const ContentRestaurante = (
+const ContentRestaurante = ({ onOpenFrigobarModal }) => (
   <>
     <p>
       <strong>Irius Gastronomia (Restaurante):</strong>
@@ -77,11 +78,33 @@ const ContentRestaurante = (
       <br />
       Todos os dias: 11:00 às 23:00.
     </p>
-    {/* TODO: Botões de MODAL para os cardápios */}
+    <div style={{ textAlign: "center", margin: "10px 0" }}>
+      <button
+        className="button-primary"
+        onClick={() =>
+          window.open("https://swan-hoteis-2.goomer.app/menu", "_blank")
+        }
+      >
+        Ver Cardápio
+      </button>
+    </div>
+    <p>
+      <strong>Frigobar</strong>
+      <br />
+      Consulte os itens e valores do nosso frigobar.
+    </p>
+    <div style={{ textAlign: "center", margin: "10px 0" }}>
+      <button
+        className="button-primary" // Usamos o mesmo estilo
+        onClick={onOpenFrigobarModal}
+      >
+        Ver Cardápio
+      </button>
+    </div>
   </>
 );
 
-const ContentCheckInOut = (
+const ContentCheckInOut = () => (
   <>
     <p>
       <strong>Check-in:</strong> a partir das 14:00.
@@ -96,7 +119,7 @@ const ContentCheckInOut = (
   </>
 );
 
-const ContentLazer = (
+const ContentLazer = () => (
   <>
     <p>
       <strong>Academia:</strong>
@@ -127,10 +150,12 @@ const ContentServicos = ({ onOpenLaundryModal }) => (
       <strong>Lavanderia:</strong>
       <br />
       Oferecemos serviço de lavanderia.
-      <button className="button-primary" onClick={onOpenLaundryModal}>
-        Ver Tabela de Preços
-      </button>
     </p>
+    <div style={{ textAlign: "center", margin: "10px 0" }}>
+      <button className="button-primary" onClick={onOpenLaundryModal}>
+        Ver Preços
+      </button>
+    </div>
     <p>
       <strong>Estacionamento:</strong>
       <br />
@@ -139,7 +164,7 @@ const ContentServicos = ({ onOpenLaundryModal }) => (
   </>
 );
 
-const ContentPoliticas = (
+const ContentPoliticas = () => (
   <>
     <p>
       <strong>Hotel Pet Friendly:</strong>
@@ -158,7 +183,7 @@ const ContentPoliticas = (
   </>
 );
 
-const ContentLocais = (
+const ContentLocais = () => (
   <>
     <p>
       <strong>Andar SC</strong>
