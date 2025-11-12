@@ -1,0 +1,105 @@
+/* Estilos para o Modal */
+.modalBackdrop {
+  position: fixed; /* Cobre a tela inteira */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 16px;
+  box-sizing: border-box; 
+}
+
+.modalContent {
+  background-color: var(--color-surface, #fff);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px; /* Largura máxima do modal */
+  
+  /* --- Mágica do Scroll --- */
+  max-height: 85vh; /* O modal nunca ocupa mais que 85% da tela */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Garante cantos arredondados */
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border, #eee);
+  flex-shrink: 0; 
+}
+
+.modalTitle {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text-header); /* Azul Swan */
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-body);
+  transition: background-color 0.2s;
+}
+
+.closeButton:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.modalBody {
+  overflow-y: auto; /* O Scroll acontece SÓ AQUI */
+  padding: 0 20px 20px 20px;
+  color: var(--color-text-body);
+}
+
+/* --- Estilos da Tabela de Preços --- */
+.categoryWrapper {
+  margin-top: 20px;
+}
+
+.categoryTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary); /* Azul Swan */
+  margin: 0 0 8px 0;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.priceTable {
+  width: 100%;
+  border-collapse: collapse; 
+}
+
+.priceTable tr {
+  border-bottom: 1px solid var(--color-border, #eee);
+}
+.priceTable tr:last-child {
+  border-bottom: none;
+}
+
+.priceTable td {
+  padding: 10px 4px;
+  font-size: 0.9rem;
+}
+
+.priceTable td:last-child {
+  text-align: right;
+  font-weight: 600;
+  white-space: nowrap; /* Impede que o R$ quebre a linha */
+}

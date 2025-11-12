@@ -48,7 +48,7 @@ const ContentCafe = (
   <>
     <p>
       Nosso delicioso café da manhã é servido no restaurante, localizado no
-      andar S.
+      andar SC.
     </p>
     <p>
       <strong>Segunda a Sexta:</strong>
@@ -68,14 +68,14 @@ const ContentRestaurante = (
     <p>
       <strong>Irius Gastronomia (Restaurante):</strong>
       <br />
-      Segunda a Sexta: 11:30 às 14:00 e 19:00 às 23:00.
+      Segunda a Sexta: 11:30 às 14:00 e 18:30 às 23:00.
       <br />
       <small>(Fechado em finais de semana e feriados)</small>
     </p>
     <p>
       <strong>Room Service (Serviço de Quarto):</strong>
       <br />
-      Todos os dias: 11:30 às 23:00.
+      Todos os dias: 11:00 às 23:00.
     </p>
     {/* TODO: Botões de MODAL para os cardápios */}
   </>
@@ -90,8 +90,8 @@ const ContentCheckInOut = (
       <strong>Check-out:</strong> até as 12:00 (meio-dia).
     </p>
     <p>
-      Para entradas antecipadas ou *late check-out*, por favor, consulte a disponibilidade com a
-      recepção (Ramal 9).
+      Para entradas antecipadas ou *late check-out*, por favor, consulte a
+      disponibilidade com a recepção (Ramal 9).
     </p>
   </>
 );
@@ -109,20 +109,27 @@ const ContentLazer = (
       Horário: 07:00 às 21:00.
     </p>
     <p>
-      <strong>Sauna seca e úmida:</strong>
+      <strong>Sauna seca e a vapor:</strong>
       <br />
       Horário: 07:00 às 21:00.
+    </p>
+    <p>
+      <strong>Sala de jogos:</strong>
+      <br />
+      Horário: 24hrs.
     </p>
   </>
 );
 
-const ContentServicos = (
+const ContentServicos = ({ onOpenLaundryModal }) => (
   <>
     <p>
       <strong>Lavanderia:</strong>
       <br />
       Oferecemos serviço de lavanderia.
-      {/* TODO: Botão MODAL Tabela de Preços */}
+      <button className="button-primary" onClick={onOpenLaundryModal}>
+        Ver Tabela de Preços
+      </button>
     </p>
     <p>
       <strong>Estacionamento:</strong>
@@ -162,7 +169,9 @@ const ContentLocais = (
       <br />
       Psicina
       <br />
-      Sauna seca e sauna úmida
+      Sauna seca e sauna a vapor
+      <br />
+      Sala de jogos
       <br />
       Massagista - Edília*
     </p>
