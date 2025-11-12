@@ -2,7 +2,6 @@
   width: 100%;
   margin-bottom: 12px;
   border-radius: 8px;
-
   background-color: transparent;
   border: none;
   overflow: hidden; 
@@ -17,7 +16,6 @@
   /* Cor da fonte do header */
   color: var(--azul-swan);
   
-  
   border: none;
   background-color: var(--dourado-swan); 
   /* Separador interno */
@@ -28,7 +26,8 @@
   font-size: 1rem;
   font-weight: 600; 
 
-  transition: background-color 0.2s ease;
+  /* CORREÇÃO 2: Adicionada a transição da cor da borda */
+  transition: background-color 0.2s ease, border-color 0.5s ease-in-out;
 }
 
 .accordionHeader:hover {
@@ -52,7 +51,7 @@
 
 .chevron {
   color: var(--azul-swan); /* Azul Swan */
-  transition: transform .5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .chevron.open {
@@ -61,23 +60,38 @@
 
 /* O conteúdo */
 .accordionContent {
-  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
   background-color: var(--color-surface);
+  
+  /* CORREÇÃO 1: Animação com Grid (Estado Fechado) */
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease-in-out;
 }
 
 .accordionContent.open {
-  max-height: 1000px;
-  border: 1px solid transparent;
+  /* CORREÇÃO 1: Animação com Grid (Estado Aberto) */
+  grid-template-rows: 1fr;
+  /* A 'border: 1px solid transparent' foi removida מכאן */
 }
 
 
 .contentPadding {
-  padding: 10px 20px 20px 20px;
+  /* CORREÇÃO 3: Padding do Estado Fechado (só horizontal) */
+  padding: 0 20px;
   line-height: 1.6;
   color: var(--azul-swan);
+  min-height: 0;
+  
+  /* CORREÇÃO 3: Transição para o padding */
+  transition: padding 0.5s ease-in-out;
 }
+
+/* CORREÇÃO 3: Nova regra para o Padding do Estado Aberto */
+.accordionContent.open .contentPadding {
+  padding: 10px 20px 20px 20px;
+}
+
 
 /* Estilos para o conteúdo que vem do 'children' */
 .contentPadding p {

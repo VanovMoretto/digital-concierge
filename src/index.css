@@ -12,9 +12,9 @@
 
   --color-primary: var(--azul-swan);        /* Cor de destaque (ícones nos cards) */
   --color-background: var(--azul-swan);    /* Fundo da página (Azul) */
-  --color-surface: #ffffff;              /* Fundo dos cards (Branco) */
+  --color-surface: #dfdfdf;              /* Fundo dos cards (Branco) */
   --color-surface-hover: #f9f9f9;      /* Hover leve */
-  --color-border: #eeeeee;              /* Bordas */
+  --color-border: #dfdfdf;              /* Bordas */
   --color-text-header: var(--azul-swan);   /* Fonte do header do card (Azul) */
   --color-text-body: #333333;             /* Fonte do corpo (preto legível) */
   --color-text-global: var(--dourado-swan); /* Cor da fonte global (Dourado) */
