@@ -1,5 +1,7 @@
 import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
+import "flag-icon-css/css/flag-icons.min.css"
+import "./i18n.js"
 import "./index.css";
 import App from "./App.jsx";
 

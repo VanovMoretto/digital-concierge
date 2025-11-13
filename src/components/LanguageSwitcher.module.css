@@ -3,7 +3,7 @@
   top: 10px;
   right: 10px;
   z-index: 100;
-  width: 80px;
+  width: 50px; /* Largura menor */
 }
 
 .currentLangButton {
@@ -11,13 +11,13 @@
   color: var(--color-text-header);
   border: 1px solid var(--color-border);
   border-radius: 6px;
-  padding: 6px 10px;
+  padding: 6px; /* Padding uniforme para ficar mais quadrado */
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Centraliza a bandeira */
   width: 100%;
   transition: background-color 0.2s;
 }
@@ -26,22 +26,18 @@
   background-color: var(--color-surface-hover);
 }
 
+/* O span agora é apenas um container flexível */
 .currentLangButton span {
-  font-size: 1.2rem; /* Tamanho do emoji */
-}
-
-.chevron {
-  transition: transform 0.3s ease;
-}
-.chevron.open {
-  transform: rotate(180deg);
+  display: flex; 
+  align-items: center;
+  justify-content: center;
 }
 
 .dropdownMenu {
   position: absolute;
   top: 100%;
   right: 0;
-  width: 100%;
+  width: 100%; /* Vai pegar os 50px do wrapper */
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 6px;
@@ -53,14 +49,12 @@
 .dropdownItem {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center; /* Centraliza a bandeira */
   background: none;
   border: none;
   width: 100%;
-  padding: 10px;
+  padding: 8px; /* Padding menor */
   cursor: pointer;
-  font-size: 0.9rem;
-  font-family: 'Poppins', sans-serif;
   color: var(--color-text-header);
   transition: background-color 0.2s;
 }
@@ -73,8 +67,23 @@
   background-color: var(--azul-swan);
   color: var(--dourado-swan);
   cursor: default;
+  /* Adicionamos opacidade para ficar mais claro que está selecionado */
+  opacity: 0.7; 
 }
 
 .dropdownItem:disabled:hover {
   background-color: var(--azul-swan);
+}
+
+/* Define o tamanho e estilo dos ícones da biblioteca */
+.flagIcon {
+  width: 28px; /* Largura fixa */
+  height: 20px; /* Altura fixa */
+  border-radius: 3px; /* Leve arredondamento */
+  border: 1px solid rgba(0,0,0,0.1); /* Borda sutil */
+  
+  /* Garante que a imagem da bandeira cubra o container */
+  background-size: cover;
+  background-position: center;
+  display: block;
 }
