@@ -83,3 +83,11 @@ button, a, img, div {
 .button-primary:hover {
   opacity: 0.85;
 }
+
+.fi-br {
+  background-image: url(https://cdn.jsdelivr.net/npm/flag-icon-css@4.1.7/flags/4x3/br.svg) !important;
+}
+
+.fi-us {
+  background-image: url(https://cdn.jsdelivr.net/npm/flag-icon-css@4.1.7/flags/4x3/us.svg) !important;
+}

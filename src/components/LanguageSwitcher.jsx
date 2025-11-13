@@ -46,14 +46,16 @@ function LanguageSwitcher() {
 
       {isOpen && (
         <div className={styles.dropdownMenu}>
-          {supportedLanguages.map((lng) => {
-            // Pega o código do país para o item do loop (ex: 'us')
+          {supportedLanguages
+            .filter((lng) => lng !== currentLang) // <-- ADICIONA ESTE FILTRO
+            .map((lng) => {
+              // Pega o código do país para o item do loop (ex: 'us')
             const countryCode = langToCountryCode[lng];
             return (
-              <button
-                key={lng}
-                className={styles.dropdownItem}
-                onClick={() => changeLanguage(lng)}
+                <button
+                  key={lng}
+                  className={styles.dropdownItem}
+                  onClick={() => changeLanguage(lng)}
                 disabled={lng === currentLang}
               >
                 {/* O item do drop também usa as classes CSS */}
