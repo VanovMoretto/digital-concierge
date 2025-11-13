@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { accordionData } from "./data/accordionData";
+import { useTranslation } from "react-i18next";
+import { useAccordionData } from "./data/accordionData";
 import Accordion from "./components/Accordion";
 import Modal from "./components/Modal";
-import { laundryPriceList} from './data/laundryData'
+import { laundryPriceList } from './data/laundryData'
 import { frigobarPriceList } from "./data/frigobarData";
 import "./App.css";
 import Footer from "./components/Footer";
+import LanguageSwitcher from "./components/LanguageSwitcher";
 
 function Logo() {
   return (
@@ -19,15 +21,20 @@ function Logo() {
 }
 
 function App() {
+  // 4. Inicialize os hooks
+  const { t } = useTranslation();
+  const accordionData = useAccordionData(); // Pega os dados já traduzidos
+  
   const [modalContent, setModalContent] = useState(null)
 
+  // 5. Traduza os títulos do modal
   const openLaundryModal = () => setModalContent({
-    title: "Serviço de Lava e Seca",
+    title: t('modal.laundryTitle'),
     data: laundryPriceList
   });
 
   const openFrigobarModal = () => setModalContent({
-    title: "Cardápio Frigobar",
+    title: t('modal.frigobarTitle'),
     data: frigobarPriceList
   });
 
@@ -36,25 +43,24 @@ function App() {
   return (
     <>
     <div className="app-container">
+      {/* 6. Adicione o Switcher aqui */}
+      <LanguageSwitcher />
+
       <Logo />
       <section className="intro-text">
+        {/* 7. Traduza o texto de introdução */}
         <p>
-          Bem-vindo ao Astrolábio, seu guia digital para uma estada perfeita.
-          Explore nossos serviços, horários e facilidades de forma rápida e
-          intuitiva. Estamos aqui para tornar sua experiência inesquecível.
+          {t('introText')}
         </p>
       </section>
 
       <main className="accordion-list">
-        {/* 5. ATUALIZE O .map() */}
+        {/* 8. O map agora usa os dados do hook (já traduzidos) */}
         {accordionData.map((item) => {
-          // Pega o 'content' (que agora é um componente, ex: ContentInternet)
           const ContentComponent = item.content;
 
           return (
             <Accordion key={item.id} icon={item.icon} title={item.title}>
-              {/* Renderiza o componente de conteúdo, passando a função
-                  de abrir o modal APENAS se for o item de id 6 */}
               <ContentComponent
                 onOpenLaundryModal={item.id === 6 ? openLaundryModal : null}
                 onOpenFrigobarModal={item.id === 3 ? openFrigobarModal : null}
@@ -64,13 +70,12 @@ function App() {
         })}
       </main>
 
-      {/* 6. ADICIONE O MODAL AQUI (fora do 'main') */}
-      {/* Ele fica "escutando" o estado 'isLaundryModalOpen' */}
       <Modal 
-      isOpen={!!modalContent}
-      onClose={closeModal}
-      title={modalContent?.title}
-      data={modalContent?.data}/>
+        isOpen={!!modalContent}
+        onClose={closeModal}
+        title={modalContent?.title} // O título já vem traduzido
+        data={modalContent?.data}
+      />
     </div>
     <Footer />
     </>

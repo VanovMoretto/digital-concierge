@@ -1,10 +1,12 @@
 import React from "react";
-import styles from "./Footer.module.css"; // Vamos criar este arquivo
+import styles from "./Footer.module.css";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className={styles.footer}>
-      {/* 1. Imagem do Logo */}
       <div className={styles.footerLogo}>
         <a href="https://www.swanhoteis.com.br/" target="_blank" rel="noopener noreferrer">
           <img
@@ -14,14 +16,14 @@ function Footer() {
         </a>
       </div>
 
-      {/* 2. Copyright */}
+      {/* 3. Traduza o copyright */}
       <div className={styles.footerCopyright}>
-        <small>© 2024 Todos os direitos reservados</small>
+        <small>{t('footer.copyright')}</small>
       </div>
 
-      {/* 3. Créditos de Desenvolvedor */}
+      {/* 4. Traduza os créditos */}
       <div className={styles.footerDev}>
-        Desenvolvido por
+        {t('footer.devCredit')}
         <a
           href="https://SEU_LINK_DO_LINKEDIN_AQUI"
           target="_blank"

@@ -1,0 +1,47 @@
+{
+  "loading": "Loading...",
+  "introText": "Welcome to Astrolábio, your digital guide for a perfect stay. Explore our services, schedules, and facilities quickly and intuitively. We are here to make your experience unforgettable.",
+  "modal": {
+    "laundryTitle": "Laundry Service",
+    "frigobarTitle": "Minibar Menu"
+  },
+  "footer": {
+    "copyright": "© 2024 All rights reserved",
+    "devCredit": "Developed by"
+  },
+  "accordion": {
+    "internet": {
+      "title": "Internet & Phones",
+      "wifiTitle": "Wi-Fi:",
+      "wifiDesc": "Free access throughout the hotel.",
+      "wifiNet": "Network: <1>SWAN_HOTEIS</1>",
+      "wifiLogin": "Log in to the network, then use:",
+      "wifiUser": "Login: <1>room number</1>",
+      "wifiPass": "Password: <1>Last surname in lowercase</1>",
+      "phonesTitle": "Useful Phones:",
+      "phonesReception": "Reception: <1>Ext. 9</1>",
+      "phonesRestaurant": "Restaurant: <1>Ext. 1110</1>"
+    },
+    "breakfast": {
+      "title": "Breakfast"
+    },
+    "restaurant": {
+      "title": "Restaurant & Room Service"
+    },
+    "leisure": {
+      "title": "Leisure"
+    },
+    "map": {
+      "title": "Hotel Map"
+    },
+    "services": {
+      "title": "Services"
+    },
+    "checkin": {
+      "title": "Check-in & Check-out"
+    },
+    "policies": {
+      "title": "Hotel Policies"
+    }
+  }
+}

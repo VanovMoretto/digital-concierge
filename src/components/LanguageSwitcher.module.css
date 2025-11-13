@@ -1,0 +1,80 @@
+.switcherWrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+  width: 80px;
+}
+
+.currentLangButton {
+  background-color: var(--color-surface);
+  color: var(--color-text-header);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.currentLangButton:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.currentLangButton span {
+  font-size: 1.2rem; /* Tamanho do emoji */
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  margin-top: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-text-header);
+  transition: background-color 0.2s;
+}
+
+.dropdownItem:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.dropdownItem:disabled {
+  background-color: var(--azul-swan);
+  color: var(--dourado-swan);
+  cursor: default;
+}
+
+.dropdownItem:disabled:hover {
+  background-color: var(--azul-swan);
+}

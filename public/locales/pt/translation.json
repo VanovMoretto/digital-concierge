@@ -1,0 +1,47 @@
+{
+  "loading": "Carregando...",
+  "introText": "Bem-vindo ao Astrolábio, seu guia digital para uma estada perfeita. Explore nossos serviços, horários e facilidades de forma rápida e intuitiva. Estamos aqui para tornar sua experiência inesquecível.",
+  "modal": {
+    "laundryTitle": "Serviço de Lava e Seca",
+    "frigobarTitle": "Cardápio Frigobar"
+  },
+  "footer": {
+    "copyright": "© 2024 Todos os direitos reservados",
+    "devCredit": "Desenvolvido por"
+  },
+  "accordion": {
+    "internet": {
+      "title": "Internet e Telefones",
+      "wifiTitle": "Wi-Fi:",
+      "wifiDesc": "Acesso gratuito em todo o hotel.",
+      "wifiNet": "Rede: <1>SWAN_HOTEIS</1>",
+      "wifiLogin": "Realize o login na rede, e então utilize:",
+      "wifiUser": "Login: <1>número do quarto</1>",
+      "wifiPass": "Senha: <1>Último sobrenome em letras minúsculas</1>",
+      "phonesTitle": "Telefones Úteis:",
+      "phonesReception": "Recepção: <1>Ramal 9</1>",
+      "phonesRestaurant": "Restaurante: <1>Ramal 1110</1>"
+    },
+    "breakfast": {
+      "title": "Café da Manhã"
+    },
+    "restaurant": {
+      "title": "Restaurante e Room Service"
+    },
+    "leisure": {
+      "title": "Lazer"
+    },
+    "map": {
+      "title": "Mapa do Hotel"
+    },
+    "services": {
+      "title": "Serviços"
+    },
+    "checkin": {
+      "title": "Check-in e Check-out"
+    },
+    "policies": {
+      "title": "Políticas do Hotel"
+    }
+  }
+}
