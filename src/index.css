@@ -62,6 +62,10 @@ body {
   margin: 0 auto;
 }
 
+button, a, img, div {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .button-primary {
   background-color: var(--color-primary); /* Azul Swan */
   color: var(--dourado-swan); /* Texto Branco */
