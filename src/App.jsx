@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { accordionData } from "./data/accordionData";
 import Accordion from "./components/Accordion";
 import Modal from "./components/Modal";
-import FrigobarModal from "./components/FrigobarModal";
+import { laundryPriceList} from './data/laundryData'
+import { frigobarPriceList } from "./data/frigobarData";
 import "./App.css";
 import Footer from "./components/Footer";
 
@@ -18,13 +19,19 @@ function Logo() {
 }
 
 function App() {
-  const [isLaundryModalOpen, setIsLaundryModalOpen] = useState(false);
-  const openLaundryModal = () => setIsLaundryModalOpen(true);
-  const closeLaundryModal = () => setIsLaundryModalOpen(false);
+  const [modalContent, setModalContent] = useState(null)
 
-  const [isFrigobarModalOpen, setIsFrigobarModalOpen] = useState(false);
-  const openFrigobarModal = () => setIsFrigobarModalOpen(true);
-  const closeFrigobarModal = () => setIsFrigobarModalOpen(false);
+  const openLaundryModal = () => setModalContent({
+    title: "Serviço de Lava e Seca",
+    data: laundryPriceList
+  });
+
+  const openFrigobarModal = () => setModalContent({
+    title: "Cardápio Frigobar",
+    data: frigobarPriceList
+  });
+
+  const closeModal = () => setModalContent(null)
 
   return (
     <>
@@ -59,12 +66,11 @@ function App() {
 
       {/* 6. ADICIONE O MODAL AQUI (fora do 'main') */}
       {/* Ele fica "escutando" o estado 'isLaundryModalOpen' */}
-      <Modal isOpen={isLaundryModalOpen} onClose={closeLaundryModal} />
-      <FrigobarModal
-        isOpen={isFrigobarModalOpen}
-        onClose={closeFrigobarModal}
-        imageName="cardapio-frigobar.png"
-      />
+      <Modal 
+      isOpen={!!modalContent}
+      onClose={closeModal}
+      title={modalContent?.title}
+      data={modalContent?.data}/>
     </div>
     <Footer />
     </>

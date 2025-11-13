@@ -1,46 +1,61 @@
 import React from 'react';
 import styles from './Modal.module.css';
 import { X } from 'lucide-react';
-// 1. Importamos nossa lista de preços que já criamos
-import { laundryPriceList } from '../data/laundryData.js';
+// 1. REMOVA a importação da lavanderia daqui:
+// import { laundryPriceList } from '../data/laundryData.js';
 
-function Modal({ isOpen, onClose }) {
-  if (!isOpen) {
-    return null; // Se não estiver aberto, não renderiza nada
+// 2. ADICIONE 'title' e 'data' nas props
+function Modal({ isOpen, onClose, title, data }) {
+  // 3. ATUALIZE a condição de saída
+  if (!isOpen || !data) {
+    return null; 
   }
 
-  // A função 'onClose' será chamada se o usuário clicar no fundo escuro
+  // 4. LÓGICA INTELIGENTE: Verificamos se os dados têm 3 colunas (qty)
+  const hasQuantity = data[0]?.items[0]?.qty !== undefined;
+
   return (
     <div className={styles.modalBackdrop} onClick={onClose}>
-      
-      {/* Usamos e.stopPropagation() para evitar que o clique no modal feche ele */}
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         
-        {/* Header do Modal */}
         <div className={styles.modalHeader}>
-          <h2 className={styles.modalTitle}>Serviço Lava e Seca</h2>
+          {/* 5. Usamos o 'title' dinâmico */}
+          <h2 className={styles.modalTitle}>{title}</h2>
           <button className={styles.closeButton} onClick={onClose}>
             <X size={24} />
           </button>
         </div>
         
-        {/* Corpo do Modal (onde a tabela é criada) */}
         <div className={styles.modalBody}>
-          {/* 2. Mapeamos cada CATEGORIA da nossa lista */}
-          {laundryPriceList.map((categoryData, index) => (
+          {/* 6. Mapeamos os 'data' dinâmicos */}
+          {data.map((categoryData, index) => (
             <div key={index} className={styles.categoryWrapper}>
               
-              {/* 3. Renderiza o título da categoria */}
               <h3 className={styles.categoryTitle}>{categoryData.category}</h3>
               
-              {/* 4. Cria a tabela para os itens */}
               <table className={styles.priceTable}>
+                {/* 7. ADICIONA o Header (<thead>) SÓ SE for 3 colunas */}
+                {hasQuantity && (
+                  <thead>
+                    <tr>
+                      <th className={styles.qtyCol}>Qtd.</th>
+                      <th className={styles.productCol}>Produto</th>
+                      <th className={styles.priceCol}>Valor Unit.</th>
+                    </tr>
+                  </thead>
+                )}
+
                 <tbody>
-                  {/* 5. Mapeia cada ITEM dentro da categoria */}
                   {categoryData.items.map((item, itemIndex) => (
                     <tr key={itemIndex}>
-                      <td>{item.name}</td>
-                      <td>{item.price}</td>
+                      {/* 8. ADICIONA a coluna (<td>) SÓ SE for 3 colunas */}
+                      {hasQuantity && <td className={styles.qtyCol}>{item.qty}</td>}
+                      
+                      {/* 9. Adiciona classe de alinhamento no nome */}
+                      <td className={!hasQuantity ? styles.productColOnly : ''}>
+                        {item.name}
+                      </td>
+                      <td className={styles.priceCol}>{item.price}</td>
                     </tr>
                   ))}
                 </tbody>

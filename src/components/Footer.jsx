@@ -1,15 +1,17 @@
-import React from 'react';
-import styles from './Footer.module.css'; // Vamos criar este arquivo
+import React from "react";
+import styles from "./Footer.module.css"; // Vamos criar este arquivo
 
 function Footer() {
   return (
     <footer className={styles.footer}>
       {/* 1. Imagem do Logo */}
       <div className={styles.footerLogo}>
-        <img 
-          src="https://lirp.cdn-website.com/02637c80/dms3rep/multi/opt/Ativo+1-10259147-1920w.png" 
-          alt="Swan Hotéis" 
-        />
+        <a href="https://www.swanhoteis.com.br/" target="_blank" rel="noopener noreferrer">
+          <img
+            src="https://lirp.cdn-website.com/02637c80/dms3rep/multi/opt/Ativo+1-10259147-1920w.png"
+            alt="Swan Hotéis"
+          />
+        </a>
       </div>
 
       {/* 2. Copyright */}
@@ -19,10 +21,10 @@ function Footer() {
 
       {/* 3. Créditos de Desenvolvedor */}
       <div className={styles.footerDev}>
-        Desenvolvido por 
-        <a 
-          href="https://SEU_LINK_DO_LINKEDIN_AQUI" 
-          target="_blank" 
+        Desenvolvido por
+        <a
+          href="https://SEU_LINK_DO_LINKEDIN_AQUI"
+          target="_blank"
           rel="noopener noreferrer"
         >
           Vanov Moretto
