@@ -4,8 +4,10 @@ import styles from './LanguageSwitcher.module.css';
 
 // Mapeia o código de IDIOMA para o código de PAÍS (para as bandeiras)
 const langToCountryCode = {
-  pt: 'br', // pt -> bandeira do Brasil (br)
-  en: 'us', // en -> bandeira dos EUA (us)
+  pt: 'br', 
+  en: 'us',
+  es: 'es',
+  zh: 'cn',
 };
 
 function LanguageSwitcher() {

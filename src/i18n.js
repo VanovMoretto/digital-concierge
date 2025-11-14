@@ -7,7 +7,7 @@ i18n
   .use(initReactI18next) // Passa a instância i18n para o react-i18next
   .init({
     // Define os idiomas suportados
-    supportedLngs: ['pt', 'en'],
+    supportedLngs: ['pt', 'en', 'es', 'zh'],
     
     // Idioma padrão
     fallbackLng: 'pt',
