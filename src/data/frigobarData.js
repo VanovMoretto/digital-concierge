@@ -1,38 +1,44 @@
 /**
  * frigobarData.js
  *
- * Lista de itens do frigobar, separados por categoria.
- * Usamos 3 colunas: qty, name, price.
+ * Agora exporta um hook que retorna a lista de itens traduzida.
  */
+import { useTranslation } from 'react-i18next';
 
 const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
 
-export const frigobarPriceList = [
-  {
-    category: "Bebidas",
-    items: [
-      { qty: 4, name: "Água Mineral Copo", price: formatPrice(5) },
-      { qty: 5, name: "Água Mineral Garrafa", price: formatPrice(8) },
-      { qty: 4, name: "Refrigerante", price: formatPrice(10) },
-      { qty: 1, name: "Suco Integral de Uva", price: formatPrice(16) },
-      { qty: 2, name: "Suco de Frutas", price: formatPrice(9) },
-      { qty: 1, name: "Achocolatado", price: formatPrice(9) },
-      { qty: 1, name: "Red Bull", price: formatPrice(22) },
-      { qty: 2, name: "Cerveja Long Neck Heineken", price: formatPrice(18) },
-      { qty: 2, name: "Cerveja Long Neck Stella", price: formatPrice(16) },
-    ]
-  },
-  {
-    category: "Snacks",
-    items: [
-      { qty: 2, name: "Chicletes", price: formatPrice(5) },
-      { qty: 2, name: "Barra de Cereais", price: formatPrice(7) },
-      { qty: 1, name: "Cookies", price: formatPrice(8) },
-      { qty: 1, name: "Biscoito Salgado", price: formatPrice(8) },
-      { qty: 2, name: "Castanha de Caju", price: formatPrice(10) },
-      { qty: 2, name: "Chocolate", price: formatPrice(12) },
-      { qty: 1, name: "Chocolate Kit Kat", price: formatPrice(12) },
-      { qty: 1, name: "Batata", price: formatPrice(22) },
-    ]
-  },
-];
+export const useFrigobarData = () => {
+  const { t } = useTranslation();
+
+  const frigobarPriceList = [
+    {
+      category: t('frigobar.categories.drinks'),
+      items: [
+        { qty: 4, name: t('frigobar.items.waterCup'), price: formatPrice(5) },
+        { qty: 5, name: t('frigobar.items.waterBottle'), price: formatPrice(8) },
+        { qty: 4, name: t('frigobar.items.softDrink'), price: formatPrice(10) },
+        { qty: 1, name: t('frigobar.items.grapeJuice'), price: formatPrice(16) },
+        { qty: 2, name: t('frigobar.items.fruitJuice'), price: formatPrice(9) },
+        { qty: 1, name: t('frigobar.items.chocolateMilk'), price: formatPrice(9) },
+        { qty: 1, name: t('frigobar.items.redBull'), price: formatPrice(22) },
+        { qty: 2, name: t('frigobar.items.heineken'), price: formatPrice(18) },
+        { qty: 2, name: t('frigobar.items.stella'), price: formatPrice(16) },
+      ]
+    },
+    {
+      category: t('frigobar.categories.snacks'),
+      items: [
+        { qty: 2, name: t('frigobar.items.gum'), price: formatPrice(5) },
+        { qty: 2, name: t('frigobar.items.cerealBar'), price: formatPrice(7) },
+        { qty: 1, name: t('frigobar.items.cookies'), price: formatPrice(8) },
+        { qty: 1, name: t('frigobar.items.crackers'), price: formatPrice(8) },
+        { qty: 2, name: t('frigobar.items.cashew'), price: formatPrice(10) },
+        { qty: 2, name: t('frigobar.items.chocolate'), price: formatPrice(12) },
+        { qty: 1, name: t('frigobar.items.kitkat'), price: formatPrice(12) },
+        { qty: 1, name: t('frigobar.items.chips'), price: formatPrice(22) },
+      ]
+    },
+  ];
+
+  return frigobarPriceList;
+};

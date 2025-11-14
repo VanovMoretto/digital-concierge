@@ -3,8 +3,9 @@ import { useTranslation } from "react-i18next";
 import { useAccordionData } from "./data/accordionData";
 import Accordion from "./components/Accordion";
 import Modal from "./components/Modal";
-import { laundryPriceList } from './data/laundryData'
-import { frigobarPriceList } from "./data/frigobarData";
+// 1. IMPORTE OS HOOKS DE DADOS
+import { useLaundryData } from './data/laundryData';
+import { useFrigobarData } from "./data/frigobarData";
 import "./App.css";
 import Footer from "./components/Footer";
 import LanguageSwitcher from "./components/LanguageSwitcher";
@@ -21,13 +22,17 @@ function Logo() {
 }
 
 function App() {
-  // 4. Inicialize os hooks
+  // 2. Inicialize os hooks
   const { t } = useTranslation();
   const accordionData = useAccordionData(); // Pega os dados já traduzidos
   
-  const [modalContent, setModalContent] = useState(null)
+  // 3. CHAME OS HOOKS DE DADOS PARA OBTER AS LISTAS TRADUZIDAS
+  const laundryPriceList = useLaundryData();
+  const frigobarPriceList = useFrigobarData();
 
-  // 5. Traduza os títulos do modal
+  const [modalContent, setModalContent] = useState(null);
+
+  // 4. O restante funciona como antes, pois os nomes das variáveis são os mesmos
   const openLaundryModal = () => setModalContent({
     title: t('modal.laundryTitle'),
     data: laundryPriceList
@@ -38,46 +43,43 @@ function App() {
     data: frigobarPriceList
   });
 
-  const closeModal = () => setModalContent(null)
+  const closeModal = () => setModalContent(null);
 
   return (
     <>
-    <div className="app-container">
-      {/* 6. Adicione o Switcher aqui */}
-      <LanguageSwitcher />
+      <div className="app-container">
+        <LanguageSwitcher />
 
-      <Logo />
-      <section className="intro-text">
-        {/* 7. Traduza o texto de introdução */}
-        <p>
-          {t('introText')}
-        </p>
-      </section>
+        <Logo />
+        <section className="intro-text">
+          <p>
+            {t('introText')}
+          </p>
+        </section>
 
-      <main className="accordion-list">
-        {/* 8. O map agora usa os dados do hook (já traduzidos) */}
-        {accordionData.map((item) => {
-          const ContentComponent = item.content;
+        <main className="accordion-list">
+          {accordionData.map((item) => {
+            const ContentComponent = item.content;
 
-          return (
-            <Accordion key={item.id} icon={item.icon} title={item.title}>
-              <ContentComponent
-                onOpenLaundryModal={item.id === 6 ? openLaundryModal : null}
-                onOpenFrigobarModal={item.id === 3 ? openFrigobarModal : null}
-              />
-            </Accordion>
-          );
-        })}
-      </main>
+            return (
+              <Accordion key={item.id} icon={item.icon} title={item.title}>
+                <ContentComponent
+                  onOpenLaundryModal={item.id === 6 ? openLaundryModal : null}
+                  onOpenFrigobarModal={item.id === 3 ? openFrigobarModal : null}
+                />
+              </Accordion>
+            );
+          })}
+        </main>
 
-      <Modal 
-        isOpen={!!modalContent}
-        onClose={closeModal}
-        title={modalContent?.title} // O título já vem traduzido
-        data={modalContent?.data}
-      />
-    </div>
-    <Footer />
+        <Modal
+          isOpen={!!modalContent}
+          onClose={closeModal}
+          title={modalContent?.title}
+          data={modalContent?.data}
+        />
+      </div>
+      <Footer />
     </>
   );
 }

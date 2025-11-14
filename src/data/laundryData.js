@@ -1,102 +1,108 @@
-/* * Este arquivo exporta uma lista de categorias de lavanderia.
- * Cada categoria tem um título e uma lista de itens com nome e preço.
- * Isso facilita a renderização em um modal com subtítulos.
+/*
+ * Exporta um hook que retorna a lista de lavanderia traduzida.
  */
+import { useTranslation } from 'react-i18next';
 
 const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
 
-export const laundryPriceList = [
-  {
-    category: "Peças Superiores (Camisas, Blusas)",
-    items: [
-      { name: "Camiseta", price: formatPrice(32) },
-      { name: "Blusa (Simples)", price: formatPrice(32) }, 
-      { name: "Regata", price: formatPrice(36) },
-      { name: "Camiseta Manga Longa", price: formatPrice(39) },
-      { name: "Polo", price: formatPrice(41) },
-      { name: "Camisa", price: formatPrice(46) },
-      { name: "Camisa Social", price: formatPrice(46) },
-      { name: "Polo Manga Longa", price: formatPrice(47) },
-      { name: "Camisa de Sarja", price: formatPrice(57) },
-      { name: "Camisa de Linho ou Seda", price: formatPrice(65) },
-      { name: "Blusa", price: formatPrice(66) },
-      { name: "Blusa Manga Longa", price: formatPrice(66) },
-      { name: "Blusa Seda", price: formatPrice(77) },
-    ]
-  },
-  {
-    category: "Peças Inferiores (Calças, Saias)",
-    items: [
-      { name: "Bermuda", price: formatPrice(35) },
-      { name: "Calça Leg", price: formatPrice(39) },
-      { name: "Calça", price: formatPrice(43) },
-      { name: "Calça Sarja", price: formatPrice(47) },
-      { name: "Calça Moletom", price: formatPrice(53) },
-      { name: "Bermuda de Linho", price: formatPrice(54) },
-      { name: "Bermuda Social", price: formatPrice(54) },
-      { name: "Calça Larga", price: formatPrice(65) },
-      { name: "Calça Motoqueiro", price: formatPrice(67) },
-      { name: "Calça Social", price: formatPrice(70) },
-      { name: "Saia de Linho", price: formatPrice(88) },
-      { name: "Bombacha", price: formatPrice(96) },
-    ]
-  },
-  {
-    category: "Roupas de Frio (Casacos, Moletons)",
-    items: [
-      { name: "Agasalho Esportivo", price: formatPrice(62) },
-      { name: "Casacão / Sobretudo", price: formatPrice(72) },
-      { name: "Casaco Moletom c/ Fecho", price: formatPrice(77) },
-      { name: "Blusão", price: formatPrice(79) },
-      { name: "Moletom", price: formatPrice(79) },
-      { name: "Casaco", price: formatPrice(99) },
-      { name: "Jaqueta Jeans", price: formatPrice(105) },
-      { name: "Jaqueta", price: formatPrice(107) },
-      { name: "Casaco Lã 3/4", price: formatPrice(119) },
-      { name: "Japona Forrada", price: formatPrice(122) },
-    ]
-  },
-  {
-    category: "Peças Únicas e Ternos",
-    items: [
-      { name: "Blazer", price: formatPrice(83) },
-      { name: "Blazer Lã / Linho", price: formatPrice(88) },
-      { name: "Macacão", price: formatPrice(97) },
-      { name: "Terno", price: formatPrice(146) },
-      { name: "Traje Fem. / Masc.", price: formatPrice(148) },
-      { name: "Pala", price: formatPrice(154) },
-      { name: "Vestido Festa (à partir)", price: formatPrice(165) },
-    ]
-  },
-  {
-    category: "Roupas Íntimas, Pijamas e Praia",
-    items: [
-      { name: "Bikini (peça)", price: formatPrice(24) },
-      { name: "Calcinha", price: formatPrice(24) },
-      { name: "Cueca", price: formatPrice(24) },
-      { name: "Meia (par)", price: formatPrice(24) },
-      { name: "Cueca Samba Canção", price: formatPrice(29) },
-      { name: "Sunga", price: formatPrice(32) },
-      { name: "Sutiã", price: formatPrice(32) },
-      { name: "Body", price: formatPrice(36) },
-      { name: "Top Lycra", price: formatPrice(43) },
-      { name: "Pijama (peça)", price: formatPrice(44) },
-    ]
-  },
-  {
-    category: "Acessórios e Sapatos",
-    items: [
-      { name: "Lenço (P)", price: formatPrice(29) },
-      { name: "Gravata", price: formatPrice(36) },
-      { name: "Bota", price: formatPrice(99) },
-      { name: "Tênis", price: formatPrice(107) },
-    ]
-  },
-  {
-    category: "Itens Especiais (Bebê)",
-    items: [
-      { name: "Bebê Conforto", price: formatPrice(122) },
-      { name: "Carrinho de Bebê", price: formatPrice(177) },
-    ]
-  }
-];
+export const useLaundryData = () => {
+  const { t } = useTranslation();
+
+  const laundryPriceList = [
+    {
+      category: t('laundry.categories.tops'),
+      items: [
+        { name: t('laundry.items.tshirt'), price: formatPrice(32) },
+        { name: t('laundry.items.blouseSimple'), price: formatPrice(32) },
+        { name: t('laundry.items.tankTop'), price: formatPrice(36) },
+        { name: t('laundry.items.longSleeveTshirt'), price: formatPrice(39) },
+        { name: t('laundry.items.polo'), price: formatPrice(41) },
+        { name: t('laundry.items.shirt'), price: formatPrice(46) },
+        { name: t('laundry.items.dressShirt'), price: formatPrice(46) },
+        { name: t('laundry.items.longSleevePolo'), price: formatPrice(47) },
+        { name: t('laundry.items.twillShirt'), price: formatPrice(57) },
+        { name: t('laundry.items.linenShirt'), price: formatPrice(65) },
+        { name: t('laundry.items.blouse'), price: formatPrice(66) },
+        { name: t('laundry.items.longSleeveBlouse'), price: formatPrice(66) },
+        { name: t('laundry.items.silkBlouse'), price: formatPrice(77) },
+      ]
+    },
+    {
+      category: t('laundry.categories.bottoms'),
+      items: [
+        { name: t('laundry.items.shorts'), price: formatPrice(35) },
+        { name: t('laundry.items.leggings'), price: formatPrice(39) },
+        { name: t('laundry.items.pants'), price: formatPrice(43) },
+        { name: t('laundry.items.twillPants'), price: formatPrice(47) },
+        { name: t('laundry.items.sweatpants'), price: formatPrice(53) },
+        { name: t('laundry.items.linenShorts'), price: formatPrice(54) },
+        { name: t('laundry.items.dressShorts'), price: formatPrice(54) },
+        { name: t('laundry.items.widePants'), price: formatPrice(65) },
+        { name: t('laundry.items.motoPants'), price: formatPrice(67) },
+        { name: t('laundry.items.dressPants'), price: formatPrice(70) },
+        { name: t('laundry.items.linenSkirt'), price: formatPrice(88) },
+        { name: t('laundry.items.bombacha'), price: formatPrice(96) },
+      ]
+    },
+    {
+      category: t('laundry.categories.cold'),
+      items: [
+        { name: t('laundry.items.tracksuit'), price: formatPrice(62) },
+        { name: t('laundry.items.overcoat'), price: formatPrice(72) },
+        { name: t('laundry.items.zipHoodie'), price: formatPrice(77) },
+        { name: t('laundry.items.sweater'), price: formatPrice(79) },
+        { name: t('laundry.items.hoodie'), price: formatPrice(79) },
+        { name: t('laundry.items.coat'), price: formatPrice(99) },
+        { name: t('laundry.items.denimJacket'), price: formatPrice(105) },
+        { name: t('laundry.items.jacket'), price: formatPrice(107) },
+        { name: t('laundry.items.woolCoat'), price: formatPrice(119) },
+        { name: t('laundry.items.linedJacket'), price: formatPrice(122) },
+      ]
+    },
+    {
+      category: t('laundry.categories.suits'),
+      items: [
+        { name: t('laundry.items.blazer'), price: formatPrice(83) },
+        { name: t('laundry.items.woolBlazer'), price: formatPrice(88) },
+        { name: t('laundry.items.jumpsuit'), price: formatPrice(97) },
+        { name: t('laundry.items.suit'), price: formatPrice(146) },
+        { name: t('laundry.items.formalWear'), price: formatPrice(148) },
+        { name: t('laundry.items.pala'), price: formatPrice(154) },
+        { name: t('laundry.items.partyDress'), price: formatPrice(165) },
+      ]
+    },
+    {
+      category: t('laundry.categories.underwear'),
+      items: [
+        { name: t('laundry.items.bikini'), price: formatPrice(24) },
+        { name: t('laundry.items.panties'), price: formatPrice(24) },
+        { name: t('laundry.items.underpants'), price: formatPrice(24) },
+        { name: t('laundry.items.socks'), price: formatPrice(24) },
+        { name: t('laundry.items.boxer'), price: formatPrice(29) },
+        { name: t('laundry.items.trunks'), price: formatPrice(32) },
+        { name: t('laundry.items.bra'), price: formatPrice(32) },
+        { name: t('laundry.items.body'), price: formatPrice(36) },
+        { name: t('laundry.items.sportsBra'), price: formatPrice(43) },
+        { name: t('laundry.items.pajama'), price: formatPrice(44) },
+      ]
+    },
+    {
+      category: t('laundry.categories.accessories'),
+      items: [
+        { name: t('laundry.items.scarf'), price: formatPrice(29) },
+        { name: t('laundry.items.tie'), price: formatPrice(36) },
+        { name: t('laundry.items.boots'), price: formatPrice(99) },
+        { name: t('laundry.items.sneakers'), price: formatPrice(107) },
+      ]
+    },
+    {
+      category: t('laundry.categories.baby'),
+      items: [
+        { name: t('laundry.items.babySeat'), price: formatPrice(122) },
+        { name: t('laundry.items.stroller'), price: formatPrice(177) },
+      ]
+    }
+  ];
+
+  return laundryPriceList;
+};
