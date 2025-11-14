@@ -91,3 +91,11 @@ button, a, img, div {
 .fi-us {
   background-image: url(https://cdn.jsdelivr.net/npm/flag-icon-css@4.1.7/flags/4x3/us.svg) !important;
 }
+
+.fi-es {
+  background-image: url(https://cdn.jsdelivr.net/npm/flag-icon-css@4.1.7/flags/4x3/es.svg) !important;
+}
+
+.fi-cn {
+  background-image: url(https://cdn.jsdelivr.net/npm/flag-icon-css@4.1.7/flags/4x3/cn.svg) !important;
+}

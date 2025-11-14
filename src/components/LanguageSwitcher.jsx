@@ -39,7 +39,6 @@ function LanguageSwitcher() {
 
   return (
     <div className={styles.switcherWrapper} ref={dropdownRef}>
-      {/* O botão agora usa as classes CSS da biblioteca */}
       <button className={styles.currentLangButton} onClick={() => setIsOpen(!isOpen)}>
         <span
           className={`fi fi-${currentCountryCode} ${styles.flagIcon}`}
