@@ -219,7 +219,7 @@ const ContentServicos = ({ onOpenLaundryModal }) => {
           }}
           href="https://wa.me/5551999983202"
           rel="noopener noreferrer"
-          target="blank"
+          target="_blank"
         >
           Edília <FaWhatsapp size={15} />
         </a>
