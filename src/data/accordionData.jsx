@@ -1,8 +1,4 @@
-/*
- * Este arquivo separa nossos DADOS (o conteúdo) da APRESENTAÇÃO (o App.jsx).
- * Usamos .jsx para poder escrever o conteúdo (os "filhos")
- * diretamente com HTML (JSX).
- */
+/* eslint-disable react/jsx-key */
 import React from "react";
 // 1. Importe os hooks de tradução
 import { useTranslation, Trans } from "react-i18next";
@@ -25,79 +21,93 @@ import {
   Baby,
 } from "lucide-react";
 
+// --- Conteúdos (Os "Filhos") ---
 
 const ContentInternet = () => {
   const { t } = useTranslation();
   return (
     <>
       <p>
-        <strong>{t('accordion.internet.wifiTitle')}</strong> {t('accordion.internet.wifiDesc')}
+        <strong>{t("accordion.internet.wifiTitle")}</strong>{" "}
+        {t("accordion.internet.wifiDesc")}
         <small>
           <br />
-          <Trans i18nKey="accordion.internet.wifiNet">
-            <strong />
-          </Trans>
+          {/* CORREÇÃO: Usando a prop 'components' */}
+          <Trans
+            i18nKey="accordion.internet.wifiNet"
+            components={{ 1: <strong /> }}
+          />
           <br />
-          {t('accordion.internet.wifiLogin')}
+          {t("accordion.internet.wifiLogin")}
           <br />
-          <Trans i18nKey="accordion.internet.wifiUser">
-            <strong />
-          </Trans>
+          {/* CORREÇÃO: Usando a prop 'components' */}
+          <Trans
+            i18nKey="accordion.internet.wifiUser"
+            components={{ 1: <strong /> }}
+          />
           <br />
-          <Trans i18nKey="accordion.internet.wifiPass">
-            <strong />
-          </Trans>
+          {/* CORREÇÃO: Usando a prop 'components' */}
+          <Trans
+            i18nKey="accordion.internet.wifiPass"
+            components={{ 1: <strong /> }}
+          />
         </small>
       </p>
       <p>
-        <strong>{t('accordion.internet.phonesTitle')}</strong>
+        <strong>{t("accordion.internet.phonesTitle")}</strong>
         <br />
-        <Trans i18nKey="accordion.internet.phonesReception">
-          <strong />
-        </Trans>
+        {/* CORREÇÃO: Usando a prop 'components' */}
+        <Trans
+          i18nKey="accordion.internet.phonesReception"
+          components={{ 1: <strong /> }}
+        />
         <br />
-        <Trans i18nKey="accordion.internet.phonesRestaurant">
-          <strong />
-        </Trans>
+        {/* CORREÇÃO: Usando a prop 'components' */}
+        <Trans
+          i18nKey="accordion.internet.phonesRestaurant"
+          components={{ 1: <strong /> }}
+        />
       </p>
     </>
   );
 };
 
 const ContentCafe = () => {
+  // ... (Este componente está correto, sem <Trans>)
   const { t } = useTranslation();
   return (
     <>
-      <p>{t('accordion.breakfast.description')}</p>
+      <p>{t("accordion.breakfast.description")}</p>
       <p>
-        <strong>{t('accordion.breakfast.weekdaysTitle')}</strong>
+        <strong>{t("accordion.breakfast.weekdaysTitle")}</strong>
         <br />
-        {t('accordion.breakfast.weekdaysTime')}
+        {t("accordion.breakfast.weekdaysTime")}
       </p>
       <p>
-        <strong>{t('accordion.breakfast.weekendsTitle')}</strong>
+        <strong>{t("accordion.breakfast.weekendsTitle")}</strong>
         <br />
-        {t('accordion.breakfast.weekendsTime')}
+        {t("accordion.breakfast.weekendsTime")}
       </p>
     </>
   );
 };
 
 const ContentRestaurante = ({ onOpenFrigobarModal }) => {
+  // ... (Este componente está correto, sem <Trans>)
   const { t } = useTranslation();
   return (
     <>
       <p>
-        <strong>{t('accordion.restaurant.restaurantTitle')}</strong>
+        <strong>{t("accordion.restaurant.restaurantTitle")}</strong>
         <br />
-        {t('accordion.restaurant.hours')}
+        {t("accordion.restaurant.hours")}
         <br />
-        <small>{t('accordion.restaurant.closedNote')}</small>
+        <small>{t("accordion.restaurant.closedNote")}</small>
       </p>
       <p>
-        <strong>{t('accordion.restaurant.roomServiceTitle')}</strong>
+        <strong>{t("accordion.restaurant.roomServiceTitle")}</strong>
         <br />
-        {t('accordion.restaurant.roomServiceHours')}
+        {t("accordion.restaurant.roomServiceHours")}
       </p>
       <div style={{ textAlign: "center", margin: "10px 0" }}>
         <button
@@ -106,20 +116,20 @@ const ContentRestaurante = ({ onOpenFrigobarModal }) => {
             window.open("https://swan-hoteis-2.goomer.app/menu", "_blank")
           }
         >
-          {t('accordion.restaurant.menuButton')}
+          {t("accordion.restaurant.menuButton")}
         </button>
       </div>
       <p>
-        <strong>{t('accordion.restaurant.minibarTitle')}</strong>
+        <strong>{t("accordion.restaurant.minibarTitle")}</strong>
         <br />
-        {t('accordion.restaurant.minibarDesc')}
+        {t("accordion.restaurant.minibarDesc")}
       </p>
       <div style={{ textAlign: "center", margin: "10px 0" }}>
         <button
           className="button-primary" // Usamos o mesmo estilo
           onClick={onOpenFrigobarModal}
         >
-          {t('accordion.restaurant.menuButton')}
+          {t("accordion.restaurant.menuButton")}
         </button>
       </div>
     </>
@@ -127,22 +137,21 @@ const ContentRestaurante = ({ onOpenFrigobarModal }) => {
 };
 
 const ContentCheckInOut = () => {
+  // ... (Este componente está correto, sem <Trans>)
   const { t } = useTranslation();
   return (
     <>
       <p>
-        <strong>{t('accordion.checkin.checkinTitle')}</strong> {t('accordion.checkin.checkinTime')}
+        <strong>{t("accordion.checkin.checkinTitle")}</strong>{" "}
+        {t("accordion.checkin.checkinTime")}
       </p>
       <p>
-        <strong>{t('accordion.checkin.checkoutTitle')}</strong> {t('accordion.checkin.checkoutTime')}
+        <strong>{t("accordion.checkin.checkoutTitle")}</strong>{" "}
+        {t("accordion.checkin.checkoutTime")}
       </p>
       <div style={{ padding: "10px", fontSize: "10px" }}>
-        <li>
-          {t('accordion.checkin.note1')}
-        </li>
-        <li>
-          {t('accordion.checkin.note2')}
-        </li>
+        <li>{t("accordion.checkin.note1")}</li>
+        <li>{t("accordion.checkin.note2")}</li>
       </div>
     </>
   );
@@ -153,35 +162,37 @@ const ContentLazer = () => {
   return (
     <>
       <p>
-        <strong>{t('accordion.leisure.gymTitle')}</strong>
+        <strong>{t("accordion.leisure.gymTitle")}</strong>
         <br />
-        {t('accordion.leisure.gymHours')}
+        {t("accordion.leisure.gymHours")}
       </p>
       <p>
-        <Trans i18nKey="accordion.leisure.poolTitle">
-          <strong />
-          <small />
-        </Trans>
+        {/* CORREÇÃO: Mapeando <1> para <strong> e <2> para <small> */}
+        <Trans
+          i18nKey="accordion.leisure.poolTitle"
+          components={{ 1: <strong />, 2: <small /> }}
+        />
         <br />
-        {t('accordion.leisure.poolHours')}
+        {t("accordion.leisure.poolHours")}
       </p>
       <p>
-        <Trans i18nKey="accordion.leisure.saunaTitle">
-          <strong />
-          <small />
-        </Trans>
+        {/* CORREÇÃO: Mapeando <1> para <strong> e <2> para <small> */}
+        <Trans
+          i18nKey="accordion.leisure.saunaTitle"
+          components={{ 1: <strong />, 2: <small /> }}
+        />
         <br />
-        {t('accordion.leisure.saunaHours')}
+        {t("accordion.leisure.saunaHours")}
       </p>
       <p>
-        <strong>{t('accordion.leisure.gameRoomTitle')}</strong>
+        <strong>{t("accordion.leisure.gameRoomTitle")}</strong>
         <br />
-        {t('accordion.leisure.gameRoomHours')}
+        {t("accordion.leisure.gameRoomHours")}
       </p>
       <small style={{ fontSize: "10px" }}>
-        <Trans i18nKey="accordion.leisure.note1" />
+        {t("accordion.leisure.note1")}
         <br />
-        <Trans i18nKey="accordion.leisure.note2" />
+        {t("accordion.leisure.note2")}
       </small>
     </>
   );
@@ -192,31 +203,35 @@ const ContentServicos = ({ onOpenLaundryModal }) => {
   return (
     <>
       <p>
-        <strong>{t('accordion.services.parkingTitle')}</strong>
+        <strong>{t("accordion.services.parkingTitle")}</strong>
         <br />
-        {t('accordion.services.parkingDesc')}
+        {t("accordion.services.parkingDesc")}
       </p>
       <p>
-        <strong>{t('accordion.services.massageTitle')}</strong>
+        <strong>{t("accordion.services.massageTitle")}</strong>
         <br />
-        {t('accordion.services.massageDesc')}{' '}
-        <Trans i18nKey="accordion.services.massageLink">
-          <a
-            style={{ fontWeight: "bold", textDecoration: "none", color: "inherit" }}
-            href="https://whatsa.me/5551999983202"
-          >
-            <FaWhatsapp size={15} />
-          </a>
-        </Trans>
+        {t("accordion.services.massageDesc")}{" "}
+        <a
+          style={{
+            fontWeight: "bold",
+            textDecoration: "none",
+            color: "inherit",
+          }}
+          href="https://wa.me/5551999983202"
+          rel="noopener noreferrer"
+          target="blank"
+        >
+          Edília <FaWhatsapp size={15} />
+        </a>
       </p>
       <p>
-        <strong>{t('accordion.services.laundryTitle')}</strong>
+        <strong>{t("accordion.services.laundryTitle")}</strong>
         <br />
-        {t('accordion.services.laundryDesc')}
+        {t("accordion.services.laundryDesc")}
       </p>
       <div style={{ textAlign: "center", margin: "10px 0" }}>
         <button className="button-primary" onClick={onOpenLaundryModal}>
-          {t('accordion.services.laundryButton')}
+          {t("accordion.services.laundryButton")}
         </button>
       </div>
     </>
@@ -228,18 +243,23 @@ const ContentLocais = () => {
   return (
     <>
       <p>
-        <strong>{t('accordion.map.floorSCTitle')}</strong>
+        <strong>{t("accordion.map.floorSCTitle")}</strong>
         <br />
-        <Trans i1im_start_of_turn
-Key="accordion.map.floorSCItems" />
+        <Trans
+          i18nKey="accordion.map.floorSCItems"
+          components={{ br: <br /> }}
+        />
       </p>
       <p>
-        <strong>{t('accordion.map.floorPTitle')}</strong>
+        <strong>{t("accordion.map.floorPTitle")}</strong>
         <br />
-        <Trans i18nKey="accordion.map.floorPItems" />
+        <Trans
+          i18nKey="accordion.map.floorPItems"
+          components={{ br: <br /> }}
+        />
       </p>
       <p>
-        <strong>{t('accordion.map.floorM1Title')}</strong>
+        <strong>{t("accordion.map.floorM1Title")}</strong>
         <br />
         <Trans i18nKey="accordion.map.floorM1Items" />
       </p>
@@ -247,63 +267,87 @@ Key="accordion.map.floorSCItems" />
   );
 };
 
-
 const ContentPoliticas = () => {
   const { t } = useTranslation();
   return (
     <>
       <div style={{ padding: "10px 0 0 0" }}>
-        
-        <SubAccordion icon={<Lock size={20} />} title={t('accordion.policies.safeTitle')}>
-          <p>{t('accordion.policies.safeP1')}</p>
-          <p>{t('accordion.policies.safeP2')}</p>
-          <p>{t('accordion.policies.safeP3')}</p>
-          <p>{t('accordion.policies.safeP4')}</p>
-          <p>{t('accordion.policies.safeP5')}</p>
-          <p>{t('accordion.policies.safeP6')}</p>
+        <SubAccordion
+          icon={<Lock size={20} />}
+          title={t("accordion.policies.safeTitle")}
+        >
+          <p>{t("accordion.policies.safeP1")}</p>
+          <p>{t("accordion.policies.safeP2")}</p>
+          <p>{t("accordion.policies.safeP3")}</p>
+          <p>{t("accordion.policies.safeP4")}</p>
+          <p>{t("accordion.policies.safeP5")}</p>
+          <p>{t("accordion.policies.safeP6")}</p>
         </SubAccordion>
 
-        <SubAccordion icon={<Baby size={20} />} title={t('accordion.policies.minorsTitle')}>
-          <p>{t('accordion.policies.minorsP1')}</p>
-          <p>{t('accordion.policies.minorsP2')}</p>
+        <SubAccordion
+          icon={<Baby size={20} />}
+          title={t("accordion.policies.minorsTitle")}
+        >
+          <p>{t("accordion.policies.minorsP1")}</p>
+          <p>{t("accordion.policies.minorsP2")}</p>
         </SubAccordion>
 
-        <SubAccordion icon={<Dog size={20} />} title={t('accordion.policies.petTitle')}>
+        <SubAccordion
+          icon={<Dog size={20} />}
+          title={t("accordion.policies.petTitle")}
+        >
           <ul style={{ paddingLeft: "20px", margin: 0, fontSize: "0.9rem" }}>
-            <li>{t('accordion.policies.petLi1')}</li>
-            <li>{t('accordion.policies.petLi2')}</li>
-            <li>{t('accordion.policies.petLi3')}</li>
-            <li>{t('accordion.policies.petLi4')}</li>
-            <li>{t('accordion.policies.petLi5')}</li>
-            <li>{t('accordion.policies.petLi6')}</li>
-            <li>{t('accordion.policies.petLi7')}</li>
-            <li>{t('accordion.policies.petLi8')}</li>
+            <li>{t("accordion.policies.petLi1")}</li>
+            <li>{t("accordion.policies.petLi2")}</li>
+            <li>{t("accordion.policies.petLi3")}</li>
+            <li>{t("accordion.policies.petLi4")}</li>
+            <li>{t("accordion.policies.petLi5")}</li>
+            <li>{t("accordion.policies.petLi6")}</li>
+            <li>{t("accordion.policies.petLi7")}</li>
+            <li>{t("accordion.policies.petLi8")}</li>
           </ul>
         </SubAccordion>
 
-        <SubAccordion icon={<Users size={20} />} title={t('accordion.policies.guestsTitle')}>
-          <p>{t('accordion.policies.guestsP1')}</p>
+        <SubAccordion
+          icon={<Users size={20} />}
+          title={t("accordion.policies.guestsTitle")}
+        >
+          <p>{t("accordion.policies.guestsP1")}</p>
         </SubAccordion>
 
-        <SubAccordion icon={<BedDouble size={20} />} title={t('accordion.policies.rulesTitle')}>
+        <SubAccordion
+          icon={<BedDouble size={20} />}
+          title={t("accordion.policies.rulesTitle")}
+        >
           <p>
-            <Trans i18nKey="accordion.policies.rulesP1"><strong/></Trans>
+            <Trans
+              i18nKey="accordion.policies.rulesP1"
+              components={{ 1: <strong />, br: <br /> }}
+            />
           </p>
           <p>
-            <Trans i18nKey="accordion.policies.rulesP2"><strong/></Trans>
+            <Trans
+              i18nKey="accordion.policies.rulesP2"
+              components={{ 1: <strong />, br: <br /> }}
+            />
           </p>
           <p>
-            <Trans i18nKey="accordion.policies.rulesP3"><strong/></Trans>
+            <Trans
+              i18nKey="accordion.policies.rulesP3"
+              components={{ 1: <strong />, br: <br /> }}
+            />
           </p>
           <p>
-            <Trans i18nKey="accordion.policies.rulesP4"><strong/></Trans>
+            <Trans
+              i18nKey="accordion.policies.rulesP4"
+              components={{ 1: <strong />, br: <br /> }}
+            />
           </p>
         </SubAccordion>
       </div>
     </>
   );
 };
-
 
 // --- A LISTA PRINCIPAL (Hook) ---
 export const useAccordionData = () => {
@@ -313,49 +357,49 @@ export const useAccordionData = () => {
     {
       id: 1,
       icon: <Wifi size={24} />,
-      title: t('accordion.internet.title'),
+      title: t("accordion.internet.title"),
       content: ContentInternet,
     },
     {
       id: 2,
       icon: <Coffee size={24} />,
-      title: t('accordion.breakfast.title'),
+      title: t("accordion.breakfast.title"),
       content: ContentCafe,
     },
     {
       id: 3,
       icon: <Utensils size={24} />,
-      title: t('accordion.restaurant.title'),
+      title: t("accordion.restaurant.title"),
       content: ContentRestaurante,
     },
     {
       id: 4,
       icon: <Sparkles size={24} />,
-      title: t('accordion.leisure.title'),
+      title: t("accordion.leisure.title"),
       content: ContentLazer,
     },
     {
       id: 5,
       icon: <Building size={24} />,
-      title: t('accordion.map.title'),
+      title: t("accordion.map.title"),
       content: ContentLocais,
     },
     {
       id: 6,
       icon: <ConciergeBell size={24} />,
-      title: t('accordion.services.title'),
+      title: t("accordion.services.title"),
       content: ContentServicos,
     },
     {
       id: 7,
       icon: <Clock size={24} />,
-      title: t('accordion.checkin.title'),
+      title: t("accordion.checkin.title"),
       content: ContentCheckInOut,
     },
     {
       id: 8,
       icon: <ShieldAlert size={24} />,
-      title: t('accordion.policies.title'),
+      title: t("accordion.policies.title"),
       content: ContentPoliticas,
     },
   ];

@@ -52,7 +52,7 @@
       "gameRoomTitle": "Sala de jogos:",
       "gameRoomHours": "Aberto 24h",
       "note1": "*A piscina está em temperatura ambiente.",
-      "note2": "**É necessário solicitar a recepção para ligar a sauna a vapor."
+      "note2": "**É necessário solicitar à recepção para ligar a sauna a vapor."
     },
     "map": {
       "title": "Mapa do Hotel",
@@ -69,7 +69,6 @@
       "parkingDesc": "Custo: R$ 20,00 a diária.",
       "massageTitle": "Massagista:",
       "massageDesc": "Agendamentos e valores:",
-      "massageLink": "<0>Edília <1/></0>",
       "laundryTitle": "Lavanderia:",
       "laundryDesc": "Oferecemos serviço de lavanderia.",
       "laundryButton": "Ver Preços"
@@ -128,7 +127,7 @@
       "redBull": "Red Bull",
       "heineken": "Cerveja Long Neck Heineken",
       "stella": "Cerveja Long Neck Stella",
-      "gum": "Chicletes",
+      "gum": "Chiclete",
       "cerealBar": "Barra de Cereais",
       "cookies": "Cookies",
       "crackers": "Biscoito Salgado",
