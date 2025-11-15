@@ -2,7 +2,7 @@
   "name": "digital-concierge",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://VanovMoretto.github.io/digital-concierge",
+  "homepage": "https://vanovmoretto.github.io/digital-concierge/",
   "type": "module",
   "scripts": {
     "dev": "vite",

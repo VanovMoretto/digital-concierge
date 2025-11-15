@@ -14,7 +14,7 @@ function Footer() {
           rel="noopener noreferrer"
         >
           <img
-            src="https://VanovMoretto.github.io/digital-concierge/digital-concierge-icon.png"
+            src="/digital-concierge-icon.png"
             alt="Logo Genérica Hotel"
           />
         </a>

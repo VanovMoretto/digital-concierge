@@ -13,8 +13,8 @@ function Logo() {
   return (
     <div className="logo">
       <img
-        src="https://VanovMoretto.github.io/digital-concierge/digital-concierge-logo.png"
-        alt=""
+        src="/digital-concierge-logo.png"
+        alt="Digital Concierge Logo"
       />
     </div>
   );
