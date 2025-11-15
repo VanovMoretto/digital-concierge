@@ -9,13 +9,13 @@ function Footer() {
     <footer className={styles.footer}>
       <div className={styles.footerLogo}>
         <a
-          href="https://www.swanhoteis.com.br/"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
         >
           <img
-            src="https://lirp.cdn-website.com/02637c80/dms3rep/multi/opt/Ativo+1-10259147-1920w.png"
-            alt="Swan Hotéis"
+            src="https://VanovMoretto.github.io/digital-concierge/digital-concierge-icon.png"
+            alt="Logo Genérica Hotel"
           />
         </a>
       </div>
@@ -26,7 +26,7 @@ function Footer() {
       <div className={styles.footerDev}>
         {t("footer.devCredit")}
         <a
-          href="https://SEU_LINK_DO_LINKEDIN_AQUI"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
         >

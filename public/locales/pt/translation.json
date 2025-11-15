@@ -1,6 +1,6 @@
 {
   "loading": "Carregando...",
-  "introText": "Bem-vindo ao Astrolábio, seu guia digital para uma estada perfeita. Explore nossos serviços, horários e facilidades de forma rápida e intuitiva. Estamos aqui para tornar sua experiência inesquecível.",
+  "introText": "Bem-vindo ao Guia Digital do seu Hotel, seu guia para uma estada perfeita. Explore nossos serviços, horários e facilidades de forma rápida e intuitiva. Estamos aqui para tornar sua experiência inesquecível.",
   "modal": {
     "laundryTitle": "Serviço de Lava e Seca",
     "frigobarTitle": "Cardápio Frigobar",
@@ -19,7 +19,7 @@
       "title": "Internet e Telefones",
       "wifiTitle": "Wi-Fi:",
       "wifiDesc": "Acesso gratuito em todo o hotel.",
-      "wifiNet": "Rede: <1>SWAN_HOTEIS</1>",
+      "wifiNet": "Rede: <1>GUEST_WIFI</1>",
       "wifiLogin": "Realize o login na rede, e então utilize:",
       "wifiUser": "<1>Login: </1>número do quarto",
       "wifiPass": "<1>Senha: </1>Último sobrenome em letras minúsculas",
@@ -37,7 +37,7 @@
     },
     "restaurant": {
       "title": "Restaurante e Room Service",
-      "restaurantTitle": "Irius Gastronomia (Restaurante):",
+      "restaurantTitle": "Restaurante Principal:",
       "hours": "Segunda a Sexta: 11:30 às 14:00 e 18:30 às 23:00.",
       "closedNote": "(Fechado em finais de semana e feriados)",
       "roomServiceTitle": "Room Service (Serviço de Quarto):",
@@ -62,9 +62,9 @@
     "map": {
       "title": "Mapa do Hotel",
       "floorSCTitle": "Andar SC",
-      "floorSCItems": "Café da manhã<br />Academia<br />Piscina<br />Sauna seca e sauna a vapor<br />Sala de jogos<br />Massagista - Edília",
+      "floorSCItems": "Café da manhã<br />Academia<br />Piscina<br />Sauna seca e sauna a vapor<br />Sala de jogos<br />Massagista",
       "floorPTitle": "Andar P",
-      "floorPItems": "Recepção<br />Restaurante Irius<br />Bar Irius<br />Centro de Eventos<br />Lobby",
+      "floorPItems": "Recepção<br />Restaurante Principal<br />Bar <br />Centro de Eventos<br />Lobby",
       "floorM1Title": "Andar -1",
       "floorM1Items": "Estacionamento"
     },
@@ -90,7 +90,7 @@
     "policies": {
       "title": "Políticas do Hotel",
       "safeTitle": "Guarda de Valores e Cofre",
-      "safeP1": "Visando à segurança dos pertences, o Swan Novo Hamburgo disponibiliza sem custo adicional um cofre individual em cada unidade hoteleira (UH) para a guarda de dinheiro, joias, documentos e demais objetos de valor e relevância. Recomendamos que os hóspedes utilizem sempre o cofre de sua unidade.",
+      "safeP1": "Visando à segurança dos pertences, o nosso hotel disponibiliza sem custo adicional um cofre individual em cada unidade hoteleira (UH) para a guarda de dinheiro, joias, documentos e demais objetos de valor e relevância. Recomendamos que os hóspedes utilizem sempre o cofre de sua unidade.",
       "safeP2": "O cofre está localizado dentro do guarda-roupa. Para retirar a chave, solicite ao setor de recepção (Ramal 9).",
       "safeP3": "Caso algum item não seja compatível com o espaço do cofre, é possível solicitar a guarda junto à gerência, em cofre especial, mediante protocolo de recebimento e descrição do(s) item(ns) entregue(s) ao hotel.",
       "safeP4": "Objetivamente, o hotel não se responsabiliza por perdas, extravios, danos ou eventuais ocorrências relativas a itens que não tenham sido devidamente guardados no cofre disponibilizado ou entregues à gerência.",

@@ -1,6 +1,6 @@
 {
   "loading": "加载中...",
-  "introText": "欢迎来到 Astrolábio，您的完美住宿数字指南。快速直观地探索我们的服务、时间表和设施。我们在此为您打造难忘的体验。",
+  "introText": "欢迎使用您的数字礼宾服务，您的完美住宿指南。快速直观地探索我们的服务、时间表和设施。我们在此为您打造难忘的体验。",
   "modal": {
     "laundryTitle": "洗衣服务",
     "frigobarTitle": "迷你吧菜单",
@@ -19,7 +19,7 @@
       "title": "网络和电话",
       "wifiTitle": "Wi-Fi:",
       "wifiDesc": "酒店全程免费网络。",
-      "wifiNet": "网络: <1>SWAN_HOTEIS</1>",
+      "wifiNet": "网络: <1>GUEST_WIFI</1>",
       "wifiLogin": "请登录网络，然后使用:",
       "wifiUser": "<1>登录名: </1>房间号",
       "wifiPass": "<1>密码: </1>姓氏全拼（小写）",
@@ -37,7 +37,7 @@
     },
     "restaurant": {
       "title": "餐厅和客房服务",
-      "restaurantTitle": "Irius Gastronomia (餐厅):",
+      "restaurantTitle": "主餐厅:",
       "hours": "周一至周五: 上午 11:30 至 下午 14:00 和 晚上 18:30 至 23:00。",
       "closedNote": "(周末和节假日关闭)",
       "roomServiceTitle": "客房服务:",
@@ -62,9 +62,9 @@
     "map": {
       "title": "酒店地图",
       "floorSCTitle": "SC 层",
-      "floorSCItems": "早餐<br />健身房<br />游泳池<br />干蒸和湿蒸桑拿<br />游戏室<br />按摩师 - Edília",
+      "floorSCItems": "早餐<br />健身房<br />游泳池<br />干蒸和湿蒸桑拿<br />游戏室<br />按摩师",
       "floorPTitle": "P 层",
-      "floorPItems": "前台<br />Irius 餐厅<br />Irius 酒吧<br />活动中心<br />大堂",
+      "floorPItems": "前台<br />主餐厅<br />大堂吧<br />活动中心<br />大堂",
       "floorM1Title": "-1 层",
       "floorM1Items": "停车场"
     },
@@ -90,7 +90,7 @@
     "policies": {
       "title": "酒店政策",
       "safeTitle": "贵重物品和保险箱",
-      "safeP1": "为确保财物安全，Swan Novo Hamburgo 在每间客房（UH）均免费提供一个独立保险箱，用于存放现金、珠宝、文件及其他贵重物品。我们建议客人始终使用您房间的保险箱。",
+      "safeP1": "为确保财物安全，我们的酒店在每间客房（UH）均免费提供一个独立保险箱，用于存放现金、珠宝、文件及其他贵重物品。我们建议客人始终使用您房间的保险箱。",
       "safeP2": "保险箱位于衣柜内。如需钥匙，请联系前台（分机 9）。",
       "safeP3": "如果物品无法放入保险箱，可请求管理层存放在特殊保险箱中，并需填写接收协议和物品描述。",
       "safeP4": "对于未妥善存放在保险箱或未交给管理层的物品，酒店概不负责任何丢失、损坏或相关问题。",

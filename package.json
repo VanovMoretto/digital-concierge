@@ -1,8 +1,8 @@
 {
-  "name": "astrolabio",
+  "name": "digital-concierge",
   "private": true,
-  "version": "0.0.0",
-  "homepage": "https://VanovMoretto.github.io/astrolabio",
+  "version": "1.0.0",
+  "homepage": "https://VanovMoretto.github.io/digital-concierge",
   "type": "module",
   "scripts": {
     "dev": "vite",

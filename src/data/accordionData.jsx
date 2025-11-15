@@ -102,7 +102,7 @@ const ContentRestaurante = ({ onOpenFrigobarModal }) => {
         <button
           className="button-primary"
           onClick={() =>
-            window.open("https://swan-hoteis-2.goomer.app/menu", "_blank")
+            window.open("#", "_blank")
           }
         >
           {t("accordion.restaurant.menuButton")}
@@ -200,11 +200,11 @@ const ContentServicos = ({ onOpenLaundryModal }) => {
             textDecoration: "none",
             color: "inherit",
           }}
-          href="https://wa.me/5551999983202"
+          href="#"
           rel="noopener noreferrer"
           target="_blank"
         >
-          Edília <FaWhatsapp size={15} />
+          (Nome) <FaWhatsapp size={15} />
         </a>
       </p>
       <p>

@@ -13,7 +13,7 @@ function Logo() {
   return (
     <div className="logo">
       <img
-        src="https://lirp.cdn-website.com/02637c80/dms3rep/multi/opt/Astrol%C3%A1bio+logo-1920w.png"
+        src="https://VanovMoretto.github.io/digital-concierge/digital-concierge-logo.png"
         alt=""
       />
     </div>

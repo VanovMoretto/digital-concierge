@@ -1,6 +1,6 @@
 {
   "loading": "Cargando...",
-  "introText": "Bienvenido a Astrolábio, su guía digital para una estancia perfecta. Explore nuestros servicios, horarios e instalaciones de forma rápida e intuitiva. Estamos aquí para hacer que su experiencia sea inolvidable.",
+  "introText": "Bienvenido a su Concierge Digital, su guía digital para una estancia perfecta. Explore nuestros servicios, horarios e instalaciones de forma rápida e intuitiva. Estamos aquí para hacer que su experiencia sea inolvidable.",
   "modal": {
     "laundryTitle": "Servicio de Lavandería",
     "frigobarTitle": "Menú del Minibar",
@@ -19,7 +19,7 @@
       "title": "Internet y Teléfonos",
       "wifiTitle": "Wi-Fi:",
       "wifiDesc": "Acceso gratuito en todo el hotel.",
-      "wifiNet": "Red: <1>SWAN_HOTEIS</1>",
+      "wifiNet": "Red: <1>GUEST_WIFI</1>",
       "wifiLogin": "Inicie sesión en la red y luego utilice:",
       "wifiUser": "<1>Usuario: </1>número de habitación",
       "wifiPass": "<1>Contraseña: </1>Último apellido en minúsculas",
@@ -37,7 +37,7 @@
     },
     "restaurant": {
       "title": "Restaurante y Servicio de Habitación",
-      "restaurantTitle": "Irius Gastronomia (Restaurante):",
+      "restaurantTitle": "Restaurante Principal:",
       "hours": "Lunes a Viernes: 11:30 a 14:00 y 18:30 a 23:00.",
       "closedNote": "(Cerrado los fines de semana y festivos)",
       "roomServiceTitle": "Servicio de Habitación (Room Service):",
@@ -62,9 +62,9 @@
     "map": {
       "title": "Mapa del Hotel",
       "floorSCTitle": "Piso SC",
-      "floorSCItems": "Desayuno<br />Gimnasio<br />Piscina<br />Sauna seca y sauna a vapor<br />Sala de juegos<br />Masajista - Edília",
+      "floorSCItems": "Desayuno<br />Gimnasio<br />Piscina<br />Sauna seca y sauna a vapor<br />Sala de juegos<br />Masajista",
       "floorPTitle": "Piso P",
-      "floorPItems": "Recepción<br />Restaurante Irius<br />Bar Irius<br />Centro de Eventos<br />Lobby",
+      "floorPItems": "Recepción<br />Restaurante Principal<br />Bar del Lobby<br />Centro de Eventos<br />Lobby",
       "floorM1Title": "Piso -1",
       "floorM1Items": "Estacionamiento"
     },
@@ -90,7 +90,7 @@
     "policies": {
       "title": "Políticas del Hotel",
       "safeTitle": "Custodia de Valores y Caja Fuerte",
-      "safeP1": "Con el fin de garantizar la seguridad de las pertenencias, el Swan Novo Hamburgo ofrece sin costo adicional una caja fuerte individual en cada unidad hotelera (UH) para guardar dinero, joyas, documentos y demás objetos de valor y relevancia. Recomendamos que los huéspedes utilicen siempre la caja fuerte de su unidad.",
+      "safeP1": "Con el fin de garantizar la seguridad de las pertenencias, nuestro hotel ofrece sin costo adicional una caja fuerte individual en cada unidad hotelera (UH) para guardar dinero, joyas, documentos y demás objetos de valor y relevancia. Recomendamos que los huéspedes utilicen siempre la caja fuerte de su unidad.",
       "safeP2": "La caja fuerte está ubicada dentro del armario. Para retirar la llave, solicítela en recepción (Ext. 9).",
       "safeP3": "Si algún artículo no es compatible con el espacio de la caja fuerte, es posible solicitar su custodia a la gerencia, en una caja fuerte especial, mediante protocolo de recepción y descripción del/los artículo(s) entregado(s) al hotel.",
       "safeP4": "Objetivamente, el hotel no se responsabiliza por pérdidas, extravíos, daños o eventuales ocurrencias relativas a artículos que no hayan sido debidamente guardados en la caja fuerte disponible o entregados a la gerencia.",

@@ -1,6 +1,6 @@
 {
   "loading": "Loading...",
-  "introText": "Welcome to Astrolábio, your digital guide for a perfect stay. Explore our services, schedules, and facilities quickly and intuitively. We are here to make your experience unforgettable.",
+  "introText": "Welcome to your Digital Concierge, your digital guide for a perfect stay. Explore our services, schedules, and facilities quickly and intuitively. We are here to make your experience unforgettable.",
   "modal": {
     "laundryTitle": "Laundry Service",
     "frigobarTitle": "Minibar Menu",
@@ -19,7 +19,7 @@
       "title": "Internet & Phones",
       "wifiTitle": "Wi-Fi:",
       "wifiDesc": "Free access throughout the hotel.",
-      "wifiNet": "Network: <1>SWAN_HOTEIS</1>",
+      "wifiNet": "Network: <1>GUEST_WIFI</1>",
       "wifiLogin": "Log in to the network, then use:",
       "wifiUser": "<1>Login: </1>room number",
       "wifiPass": "<1>Password: </1>Last surname in lowercase",
@@ -37,7 +37,7 @@
     },
     "restaurant": {
       "title": "Restaurant & Room Service",
-      "restaurantTitle": "Irius Gastronomia (Restaurant):",
+      "restaurantTitle": "Main Restaurant:",
       "hours": "Monday to Friday: 11:30 AM to 02:00 PM and 06:30 PM to 11:00 PM.",
       "closedNote": "(Closed on weekends and holidays)",
       "roomServiceTitle": "Room Service:",
@@ -62,9 +62,9 @@
     "map": {
       "title": "Hotel Map",
       "floorSCTitle": "SC Floor",
-      "floorSCItems": "Breakfast<br />Gym<br />Swimming Pool<br />Dry and steam sauna<br />Game room<br />Masseuse - Edília",
+      "floorSCItems": "Breakfast<br />Gym<br />Swimming Pool<br />Dry and steam sauna<br />Game room<br />Masseuse",
       "floorPTitle": "P Floor",
-      "floorPItems": "Reception<br />Irius Restaurant<br />Irius Bar<br />Event Center<br />Lobby",
+      "floorPItems": "Reception<br />Main Restaurant<br />Bar<br />Event Center<br />Lobby",
       "floorM1Title": "Floor -1",
       "floorM1Items": "Parking"
     },
@@ -90,7 +90,7 @@
     "policies": {
       "title": "Hotel Policies",
       "safeTitle": "Valuables and Safe Deposit Box",
-      "safeP1": "For the safety of belongings, Swan Novo Hamburgo provides an individual safe in each hotel unit (UH) at no extra cost for storing money, jewelry, documents, and other valuable items. We recommend that guests always use the safe in their unit.",
+      "safeP1": "For the safety of belongings, our hotel provides an individual safe in each hotel unit (UH) at no extra cost for storing money, jewelry, documents, and other valuable items. We recommend that guests always use the safe in their unit.",
       "safeP2": "The safe is located inside the wardrobe. To get the key, please ask at the reception desk (Ext. 9).",
       "safeP3": "If an item does not fit in the safe, storage can be requested from management in a special safe, upon protocol of receipt and description of the item(s) delivered to the hotel.",
       "safeP4": "The hotel is not responsible for loss, misplacement, damage, or any occurrences related to items not properly stored in the provided safe or handed over to management.",

@@ -1,16 +1,11 @@
-# React + Vite
+Concierge Digital (Projeto de Portfólio)
+Este é um projeto de "Concierge Digital" (SaaS) focado no setor hoteleiro. O app resolve o problema de guias de hóspedes confusos, apresentando informações críticas (Wi-Fi, horários) e serviços (Frigobar, Lavanderia) de forma clara, organizada e multilíngue.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Destaques da Arquitetura:
+UI Hierárquica: Usa Acordeões e Sub-Acordeões para reduzir a carga cognitiva.
 
-Currently, two official plugins are available:
+Internacionalização (i18n): Suporte nativo para 4 idiomas, permitindo que hotéis atendam hóspedes internacionais com excelência.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Dados Desacoplados: Preços de serviços (Frigobar, Lavanderia) são separados da lógica da UI, permitindo fácil manutenção e faturamento.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Nota de Sucesso: A arquitetura conceitual e a Propriedade Intelectual deste projeto foram adquiridas por uma rede de hotéis para implementação interna, validando sua eficácia e valor de negócio.
