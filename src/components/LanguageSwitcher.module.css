@@ -3,7 +3,7 @@
   top: 10px;
   right: 10px;
   z-index: 100;
-  width: 50px; /* Largura menor */
+  width: 50px;
 }
 
 .currentLangButton {
@@ -16,7 +16,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centraliza a bandeira */
+  justify-content: center;
   width: 100%;
   transition: opacity 0.2s;
 }
@@ -26,9 +26,8 @@
   opacity: 0.8;
 }
 
-/* O span agora é apenas um container flexível */
 .currentLangButton span {
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -49,11 +48,11 @@
 .dropdownItem {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centraliza a bandeira */
+  justify-content: center;
   background: none;
   border: none;
   width: 100%;
-  padding: 8px; /* Padding menor */
+  padding: 8px;
   cursor: pointer;
   color: var(--color-text-header);
   transition: background-color 0.2s;
@@ -67,7 +66,7 @@
 .dropdownItem:disabled {
   background-color: transparent;
   cursor: default;
-  opacity: 0.7; 
+  opacity: 0.7;
 }
 
 .dropdownItem:disabled:hover {
@@ -75,13 +74,11 @@
   opacity: 0.5;
 }
 
-/* Define o tamanho e estilo dos ícones da biblioteca */
 .flagIcon {
-  width: 28px; /* Largura fixa */
-  height: 20px; /* Altura fixa */
-  border-radius: 3px; /* Leve arredondamento */
-  
-  /* Garante que a imagem da bandeira cubra o container */
+  width: 28px;
+  height: 20px;
+  border-radius: 3px;
+
   background-size: cover;
   background-position: center;
   display: block;

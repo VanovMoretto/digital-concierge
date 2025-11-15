@@ -1,6 +1,4 @@
-/* eslint-disable react/jsx-key */
 import React from "react";
-// 1. Importe os hooks de tradução
 import { useTranslation, Trans } from "react-i18next";
 import { FaWhatsapp } from "react-icons/fa";
 import SubAccordion from "../components/SubAccordion";
@@ -21,8 +19,6 @@ import {
   Baby,
 } from "lucide-react";
 
-// --- Conteúdos (Os "Filhos") ---
-
 const ContentInternet = () => {
   const { t } = useTranslation();
   return (
@@ -32,7 +28,6 @@ const ContentInternet = () => {
         {t("accordion.internet.wifiDesc")}
         <small>
           <br />
-          {/* CORREÇÃO: Usando a prop 'components' */}
           <Trans
             i18nKey="accordion.internet.wifiNet"
             components={{ 1: <strong /> }}
@@ -40,13 +35,11 @@ const ContentInternet = () => {
           <br />
           {t("accordion.internet.wifiLogin")}
           <br />
-          {/* CORREÇÃO: Usando a prop 'components' */}
           <Trans
             i18nKey="accordion.internet.wifiUser"
             components={{ 1: <strong /> }}
           />
           <br />
-          {/* CORREÇÃO: Usando a prop 'components' */}
           <Trans
             i18nKey="accordion.internet.wifiPass"
             components={{ 1: <strong /> }}
@@ -56,13 +49,11 @@ const ContentInternet = () => {
       <p>
         <strong>{t("accordion.internet.phonesTitle")}</strong>
         <br />
-        {/* CORREÇÃO: Usando a prop 'components' */}
         <Trans
           i18nKey="accordion.internet.phonesReception"
           components={{ 1: <strong /> }}
         />
         <br />
-        {/* CORREÇÃO: Usando a prop 'components' */}
         <Trans
           i18nKey="accordion.internet.phonesRestaurant"
           components={{ 1: <strong /> }}
@@ -73,7 +64,6 @@ const ContentInternet = () => {
 };
 
 const ContentCafe = () => {
-  // ... (Este componente está correto, sem <Trans>)
   const { t } = useTranslation();
   return (
     <>
@@ -93,7 +83,6 @@ const ContentCafe = () => {
 };
 
 const ContentRestaurante = ({ onOpenFrigobarModal }) => {
-  // ... (Este componente está correto, sem <Trans>)
   const { t } = useTranslation();
   return (
     <>
@@ -125,10 +114,7 @@ const ContentRestaurante = ({ onOpenFrigobarModal }) => {
         {t("accordion.restaurant.minibarDesc")}
       </p>
       <div style={{ textAlign: "center", margin: "10px 0" }}>
-        <button
-          className="button-primary" // Usamos o mesmo estilo
-          onClick={onOpenFrigobarModal}
-        >
+        <button className="button-primary" onClick={onOpenFrigobarModal}>
           {t("accordion.restaurant.menuButton")}
         </button>
       </div>
@@ -137,7 +123,6 @@ const ContentRestaurante = ({ onOpenFrigobarModal }) => {
 };
 
 const ContentCheckInOut = () => {
-  // ... (Este componente está correto, sem <Trans>)
   const { t } = useTranslation();
   return (
     <>
@@ -167,7 +152,6 @@ const ContentLazer = () => {
         {t("accordion.leisure.gymHours")}
       </p>
       <p>
-        {/* CORREÇÃO: Mapeando <1> para <strong> e <2> para <small> */}
         <Trans
           i18nKey="accordion.leisure.poolTitle"
           components={{ 1: <strong />, 2: <small /> }}
@@ -176,7 +160,6 @@ const ContentLazer = () => {
         {t("accordion.leisure.poolHours")}
       </p>
       <p>
-        {/* CORREÇÃO: Mapeando <1> para <strong> e <2> para <small> */}
         <Trans
           i18nKey="accordion.leisure.saunaTitle"
           components={{ 1: <strong />, 2: <small /> }}
@@ -349,7 +332,6 @@ const ContentPoliticas = () => {
   );
 };
 
-// --- A LISTA PRINCIPAL (Hook) ---
 export const useAccordionData = () => {
   const { t } = useTranslation();
 

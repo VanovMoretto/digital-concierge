@@ -3,7 +3,12 @@
   "introText": "欢迎来到 Astrolábio，您的完美住宿数字指南。快速直观地探索我们的服务、时间表和设施。我们在此为您打造难忘的体验。",
   "modal": {
     "laundryTitle": "洗衣服务",
-    "frigobarTitle": "迷你吧菜单"
+    "frigobarTitle": "迷你吧菜单",
+    "table": {
+      "qty": "数量",
+      "item": "产品",
+      "unitPrice": "单价"
+    }
   },
   "footer": {
     "copyright": "© 2024 版权所有",

@@ -3,7 +3,12 @@
   "introText": "Bem-vindo ao Astrolábio, seu guia digital para uma estada perfeita. Explore nossos serviços, horários e facilidades de forma rápida e intuitiva. Estamos aqui para tornar sua experiência inesquecível.",
   "modal": {
     "laundryTitle": "Serviço de Lava e Seca",
-    "frigobarTitle": "Cardápio Frigobar"
+    "frigobarTitle": "Cardápio Frigobar",
+    "table": {
+      "qty": "Qtd.",
+      "item": "Produto",
+      "unitPrice": "Valor Unit."
+    }
   },
   "footer": {
     "copyright": "© 2024 Todos os direitos reservados",

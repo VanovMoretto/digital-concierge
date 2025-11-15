@@ -3,8 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useAccordionData } from "./data/accordionData";
 import Accordion from "./components/Accordion";
 import Modal from "./components/Modal";
-// 1. IMPORTE OS HOOKS DE DADOS
-import { useLaundryData } from './data/laundryData';
+import { useLaundryData } from "./data/laundryData";
 import { useFrigobarData } from "./data/frigobarData";
 import "./App.css";
 import Footer from "./components/Footer";
@@ -22,26 +21,25 @@ function Logo() {
 }
 
 function App() {
-  // 2. Inicialize os hooks
   const { t } = useTranslation();
-  const accordionData = useAccordionData(); // Pega os dados já traduzidos
-  
-  // 3. CHAME OS HOOKS DE DADOS PARA OBTER AS LISTAS TRADUZIDAS
+  const accordionData = useAccordionData();
+
   const laundryPriceList = useLaundryData();
   const frigobarPriceList = useFrigobarData();
 
   const [modalContent, setModalContent] = useState(null);
 
-  // 4. O restante funciona como antes, pois os nomes das variáveis são os mesmos
-  const openLaundryModal = () => setModalContent({
-    title: t('modal.laundryTitle'),
-    data: laundryPriceList
-  });
+  const openLaundryModal = () =>
+    setModalContent({
+      title: t("modal.laundryTitle"),
+      data: laundryPriceList,
+    });
 
-  const openFrigobarModal = () => setModalContent({
-    title: t('modal.frigobarTitle'),
-    data: frigobarPriceList
-  });
+  const openFrigobarModal = () =>
+    setModalContent({
+      title: t("modal.frigobarTitle"),
+      data: frigobarPriceList,
+    });
 
   const closeModal = () => setModalContent(null);
 
@@ -52,9 +50,7 @@ function App() {
 
         <Logo />
         <section className="intro-text">
-          <p>
-            {t('introText')}
-          </p>
+          <p>{t("introText")}</p>
         </section>
 
         <main className="accordion-list">

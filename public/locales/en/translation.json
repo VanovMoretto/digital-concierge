@@ -3,7 +3,12 @@
   "introText": "Welcome to Astrolábio, your digital guide for a perfect stay. Explore our services, schedules, and facilities quickly and intuitively. We are here to make your experience unforgettable.",
   "modal": {
     "laundryTitle": "Laundry Service",
-    "frigobarTitle": "Minibar Menu"
+    "frigobarTitle": "Minibar Menu",
+    "table": {
+      "qty": "Qty",
+      "item": "Product",
+      "unitPrice": "Unit Price"
+    }
   },
   "footer": {
     "copyright": "© 2024 All rights reserved",

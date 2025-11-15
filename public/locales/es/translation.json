@@ -3,7 +3,12 @@
   "introText": "Bienvenido a Astrolábio, su guía digital para una estancia perfecta. Explore nuestros servicios, horarios e instalaciones de forma rápida e intuitiva. Estamos aquí para hacer que su experiencia sea inolvidable.",
   "modal": {
     "laundryTitle": "Servicio de Lavandería",
-    "frigobarTitle": "Menú del Minibar"
+    "frigobarTitle": "Menú del Minibar",
+    "table": {
+      "qty": "Cant.",
+      "item": "Producto",
+      "unitPrice": "Valor Unit."
+    }
   },
   "footer": {
     "copyright": "© 2024 Todos los derechos reservados",
@@ -134,7 +139,7 @@
       "cashew": "Anacardos",
       "chocolate": "Chocolate",
       "kitkat": "Chocolate Kit Kat",
-      "chips": "Papas Fritas"
+      "chips": "Papas"
     }
   },
   "laundry": {

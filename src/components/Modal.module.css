@@ -1,17 +1,16 @@
-/* Estilos para o Modal */
 .modalBackdrop {
-  position: fixed; /* Cobre a tela inteira */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro */
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
   padding: 16px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .modalContent {
@@ -19,13 +18,12 @@
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 500px; /* Largura máxima do modal */
-  
-  /* --- Mágica do Scroll --- */
-  max-height: 85vh; /* O modal nunca ocupa mais que 85% da tela */
+  max-width: 500px;
+
+  max-height: 85vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Garante cantos arredondados */
+  overflow: hidden;
 }
 
 .modalHeader {
@@ -34,14 +32,14 @@
   align-items: center;
   padding: 16px 20px;
   border-bottom: 1px solid var(--color-border, #eee);
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 .modalTitle {
   margin: 0;
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--color-text-header); /* Azul Swan */
+  color: var(--color-text-header);
 }
 
 .closeButton {
@@ -62,12 +60,11 @@
 }
 
 .modalBody {
-  overflow-y: auto; /* O Scroll acontece SÓ AQUI */
+  overflow-y: auto;
   padding: 0 20px 20px 20px;
   color: var(--color-text-body);
 }
 
-/* --- Estilos da Tabela de Preços --- */
 .categoryWrapper {
   margin-top: 20px;
 }
@@ -75,7 +72,7 @@
 .categoryTitle {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--color-primary); /* Azul Swan */
+  color: var(--color-primary);
   margin: 0 0 8px 0;
   padding-bottom: 4px;
   border-bottom: 2px solid var(--color-primary);
@@ -83,11 +80,13 @@
 
 .priceTable {
   width: 100%;
-  border-collapse: collapse; 
+  border-collapse: collapse;
 }
+
 .priceTable tr {
   border-bottom: 1px solid var(--color-border, #eee);
 }
+
 .priceTable tr:last-child {
   border-bottom: none;
 }
@@ -101,25 +100,21 @@
   white-space: nowrap;
 }
 
-/* Estilo para as CÉLULAS da tabela */
 .priceTable td {
   padding: 10px 4px;
   font-size: 0.9rem;
 }
 
-/* Coluna de Quantidade (para o Frigobar) */
 .qtyCol {
   width: 50px;
   text-align: center;
 }
 
-/* Coluna de Produto (para a Lavanderia, que não tem Qt.) */
 .productColOnly {
   text-align: left;
   padding-left: 0 !important;
 }
 
-/* Coluna de Preço (para ambos) */
 .priceCol {
   width: 90px;
   text-align: right;

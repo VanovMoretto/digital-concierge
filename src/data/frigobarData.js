@@ -1,8 +1,3 @@
-/**
- * frigobarData.js
- *
- * Agora exporta um hook que retorna a lista de itens traduzida.
- */
 import { useTranslation } from 'react-i18next';
 
 const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;

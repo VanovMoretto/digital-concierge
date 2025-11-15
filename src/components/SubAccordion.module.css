@@ -1,42 +1,30 @@
-/*
- * Estilos para o SUB-ACORDEÃO (aninhado)
- */
-
 .subAccordion {
   width: 100%;
-  margin-bottom: 2px; /* Menor que o principal */
-  
-  /* --- MUDANÇA (Req. 3: Cantos Retos) --- */
+  margin-bottom: 2px;
   border-radius: 0;
-  
   background-color: transparent;
   border: none;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .subAccordionHeader {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 14px 20px; /* Um pouco menor que o principal */
-  
-  /* --- MUDANÇA (Req. 2: Cores) --- */
+  padding: 14px 20px;
   color: var(--dourado-swan);
-  background-color: var(--azul-swan); 
-  
+  background-color: var(--azul-swan);
   border: none;
-  border-bottom: 1px solid var(--dourado-swan, #9f8f65); /* Borda dourada sutil */
-  
+  border-bottom: 1px solid var(--dourado-swan, #9f8f65);
   cursor: pointer;
   text-align: left;
-  font-size: 0.9rem; /* Fonte um pouco menor */
-  font-weight: 600; 
-
+  font-size: 0.9rem;
+  font-weight: 600;
   transition: filter 0.2s ease;
 }
 
 .subAccordionHeader:hover {
-  filter: brightness(1.2); /* Clareia o azul no hover */
+  filter: brightness(1.2);
 }
 
 .subAccordionHeader.open {
@@ -47,18 +35,15 @@
   margin-right: 12px;
   display: flex;
   align-items: center;
-  
-  /* --- MUDANÇA (Req. 2: Cores) --- */
   color: var(--dourado-swan);
 }
 
 .title {
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .chevron {
-  /* --- MUDANÇA (Req. 2: Cores) --- */
-  color: var(--dourado-swan); 
+  color: var(--dourado-swan);
   transition: transform 0.5s ease-in-out;
 }
 
@@ -66,11 +51,9 @@
   transform: rotate(180deg);
 }
 
-/* O conteúdo */
 .subAccordionContent {
   overflow: hidden;
-  background-color: var(--color-surface); /* Fundo branco (ou seu cinza claro) */
-  
+  background-color: var(--color-surface);
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.5s ease-in-out;
@@ -83,7 +66,7 @@
 .contentPadding {
   padding: 0 20px;
   line-height: 1.6;
-  color: var(--color-text-body); /* Cor de texto padrão (preto) */
+  color: var(--color-text-body);
   min-height: 0;
   transition: padding 0.5s ease-in-out;
 }
@@ -92,22 +75,23 @@
   padding: 10px 20px 20px 20px;
 }
 
-/* Estilos para o conteúdo interno */
 .contentPadding p {
   margin: 0 0 10px 0;
   font-size: 0.9rem;
 }
+
 .contentPadding p:last-child {
   margin-bottom: 0;
 }
+
 .contentPadding strong {
-  color: var(--color-text-header); /* Azul swan (para combinar) */
+  color: var(--color-text-header);
   font-weight: 600;
 }
 
 .contentPadding ul {
-  padding-left: 20px; 
-  margin: 0; 
+  padding-left: 20px;
+  margin: 0;
   font-size: 0.9rem;
   list-style-position: outside;
 }
