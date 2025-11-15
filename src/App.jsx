@@ -13,7 +13,7 @@ function Logo() {
   return (
     <div className="logo">
       <img
-        src="/digital-concierge-logo.png"
+        src={`${import.meta.env.BASE_URL}digital-concierge-logo.png`}
         alt="Digital Concierge Logo"
       />
     </div>

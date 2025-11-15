@@ -14,7 +14,7 @@ function Footer() {
           rel="noopener noreferrer"
         >
           <img
-            src="/digital-concierge-icon.png"
+            src={`${import.meta.env.BASE_URL}digital-concierge-icon.png`}
             alt="Logo Genérica Hotel"
           />
         </a>
